@@ -9,7 +9,7 @@
 
 ## Descripción de la temática
 
-Tank World es un juego de AAA en 2D para dos jugadores en red en el que AAA AAA AAA AAA. Ambientado en AAA, los jugadores deben AAA AAA AAA para AAA AAA.
+Tank World es un juego party en 2D para dos jugadores en red en el que dos tanques de juguete tienen que enfrentarse en varios escenarios. Ambientado en una guerra de juguetes, los jugadores deben destruir los otros tanques para hacerse con la victoria.
 
 ## Equipo de desarrollo
 
@@ -47,11 +47,11 @@ Tank World es un juego de AAA en 2D para dos jugadores en red en el que AAA AAA 
 
 ### 1.1. Concepto del juego
 
-AAA es un juego de AAA para dos jugadores en el que AAA AAA AAA. La idea principal es AAA AAA AAA AAA AAA AAA AAA AAA.
+Tank World es un juego party para dos jugadores en el que dos tanques se tienen que enfrentar para hacerse con la victoria. La idea principal es un enfrentamiento entre dos tanques de juguete, cada uno perteneciente a un equipo, que deben dispararse en distintos escenarios, para así acabar con el rival y conseguir la victoria.
 
 ### 1.2. Propuesta de valor
 
-¿Qué hace diferente a vuestro juego? AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA.
+¿Qué hace diferente a vuestro juego? que esta dirigido a maricones.
 
 - Característica diferencial 1: AAA.
 - Característica diferencial 2: BBB.
@@ -69,13 +69,13 @@ AAA es un juego de AAA para dos jugadores en el que AAA AAA AAA. La idea princip
 
 | Aspecto | Descripción |
 | :--- | :--- |
-| **Título** | AAA |
-| **Género** | AAA (p. ej. plataformas competitivo, *party game*, *arena shooter*...) |
+| **Título** | Tank World |
+| **Género** | Pary game |
 | **Número de jugadores** | 2 (en red, tiempo real) |
-| **Público objetivo** | AAA (p. ej. jugadores casuales de 12 a 30 años) |
-| **Clasificación PEGI** | PEGI AAA (justificar) |
+| **Público objetivo** | Jugadores casuales para todas las edades |
+| **Clasificación PEGI** | PEGI 3 |
 | **Plataforma** | Navegador web (PC), desarrollado con Phaser 3 |
-| **Duración de una partida** | AAA minutos |
+| **Duración de una partida** | 3 minutos |
 | **Representación** | 2D |
 | **Licencia** | Apache 2.0 |
 
