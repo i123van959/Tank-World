@@ -87,7 +87,7 @@ Nuestro juego destaca frente a otros debido a que vamos a incluir distintos mapa
 
 > *Rúbrica — Jugabilidad / Objetivo del juego:* debe estar claramente definido.
 
-El objetivo de cada jugador es AAA AAA AAA. La partida termina cuando AAA AAA. Gana el jugador que AAA AAA.
+El objetivo de cada jugador es hacer un genocidio como mi compa el Netanyahu, pero al otro jugador. EN primer lugar destruirle el tanque e ir cortando miembro a miembro de su cuerpo hasta que sea un puzzle de 5000000 piezas con el que poder venderlo en el mercado negro y según el dinero que te den  puedes mejorar tu tanque para hacer mejor tu trabajo y seguir a tu idolo Daniel Sancho y poder ganar la partida felizmente. La partida termina cuando AAA AAA. Gana el jugador que AAA AAA.
 
 ### 3.2. Controles
 
