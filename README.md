@@ -131,11 +131,10 @@ Al acabar con el jugador contrario se conseguirá un punto. Gana el jugador que 
 
 > *Rúbrica — Jugabilidad / Físicas:* físicas variadas con elementos de dificultad.
 
-- **Gravedad y salto:** AAA AAA AAA.
-- **Colisiones:** AAA AAA AAA (con plataformas, entre jugadores, con proyectiles...).
-- **Rebotes / fricción / empujes:** AAA AAA AAA.
-- **Plataformas móviles o superficies especiales (hielo, rebote...):** AAA AAA AAA.
-- **Progresión de la dificultad:** a medida que avanza la partida AAA AAA AAA.
+- **Colisiones:** entre proyectiles, obstáculos y jugadores.
+- **Rebotes:** con el potenciador de rebote las balas rebotaran con los obstáculos.
+- **Plataformas móviles o superficies especiales:** obstáculos con desplazamiento, obstáculos destructibles y obstáculos que impiden el paso pero no el disparo.
+- **Progresión de la dificultad:** a medida que avanza la partida aparecen más potenciadores que dificultaran esquivar los disparos del rival.
 
 ### 3.5. Escenario
 
