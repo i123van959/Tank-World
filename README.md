@@ -70,7 +70,7 @@ Nuestro juego destaca frente a otros debido a que vamos a incluir distintos mapa
 | Aspecto | Descripción |
 | :--- | :--- |
 | **Título** | Tank World |
-| **Género** | Pary game |
+| **Género** | Party game |
 | **Número de jugadores** | 2 (en red, tiempo real) |
 | **Público objetivo** | Jugadores casuales para todas las edades |
 | **Clasificación PEGI** | PEGI 3 |
