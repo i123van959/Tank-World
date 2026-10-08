@@ -109,9 +109,9 @@ El objetivo de cada jugador es destruir el tanque enemigo y evitar que el rival 
 
 #### 3.3.1. Mecánicas principales
 
-- **AAA:** AAA AAA AAA AAA AAA AAA.
-- **BBB:** BBB BBB BBB BBB BBB BBB.
-- **CCC:** CCC CCC CCC CCC CCC CCC.
+- **Movimiento:** el tanque se puede mover hacia delante y hacia atrás dependiendo de a donde esté apuntando, para cambiar la dirección de movimiento se puede girar el tanque hacia la izquierda o hacia la derecha.
+- **Disparo:** el tanque podrá disparar cada medio segundo en la dirección en la que este apuntando.
+- **Potenciadores:** se podrán recoger potenciadores que aparecerán en el mapa, de los cuales, cada uno, tendrá una función distinta.
 
 #### 3.3.2. Objetos y power-ups
 
