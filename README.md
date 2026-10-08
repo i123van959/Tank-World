@@ -140,9 +140,9 @@ Al acabar con el jugador contrario se conseguirá un punto. Gana el jugador que 
 
 > *Rúbrica — Jugabilidad / Calidad del escenario.*
 
-El escenario representa AAA AAA AAA. Se compone de AAA zonas:
+El escenario representa una habitación de un niño. Se compone de 1 zonas:
 
-1. **Zona AAA:** AAA AAA AAA.
+1. **Zona 1:** AAA AAA AAA.
 2. **Zona BBB:** BBB BBB BBB.
 3. **Zona CCC:** CCC CCC CCC.
 
