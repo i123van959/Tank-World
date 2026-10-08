@@ -164,15 +164,15 @@ AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA.
 
 ### 4.2. Personajes
 
-#### AAA (Jugador 1)
+#### Tanque azul (Jugador 1)
 
 <img src="img/personaje_1.png" alt="Boceto del personaje AAA" width="250">
 
-- **Edad / origen:** AAA.
-- **Personalidad:** AAA AAA AAA.
-- **Motivación:** AAA AAA AAA.
-- **Habilidad especial:** AAA AAA AAA.
-- **Trasfondo:** AAA AAA AAA AAA AAA AAA AAA AAA AAA.
+- **Edad / origen:** 58 años.
+- **Personalidad:** es un puto tanque.
+- **Motivación:** suicidatesr.
+- **Habilidad especial:** ser igual que le roo.
+- **Trasfondo:** sigue siendo un puto tanque.
 
 #### BBB (Jugador 2)
 
@@ -206,7 +206,7 @@ CCC CCC CCC CCC CCC CCC CCC CCC.
 
 > *Rúbrica — Imagen / Estilo visual:* pixel art, cartoon, vectorial, etc.
 
-El juego utiliza un estilo **AAA** (p. ej. *pixel art* de 32×32 píxeles) porque AAA AAA AAA.
+El juego utiliza un estilo **cartoon** porque da mayor sensación de que sea un juego de dos niños, en vez de una guerra real.
 
 ### 5.3. Uso de colores
 
@@ -224,8 +224,8 @@ El juego utiliza un estilo **AAA** (p. ej. *pixel art* de 32×32 píxeles) porqu
 
 > *Rúbrica — Imagen / Aspectos técnicos:* uso de cámara y 2D/3D.
 
-- **Representación:** 2D, vista AAA (lateral / cenital / isométrica).
-- **Cámara:** AAA (fija mostrando todo el escenario / sigue a ambos jugadores con *zoom* dinámico / pantalla dividida...).
+- **Representación:** 2D, vista cenital.
+- **Cámara:** fija mostrando el escenario.
 - **Resolución base:** AAA × AAA píxeles.
 
 ### 5.5. Inspiración artística y cultural
