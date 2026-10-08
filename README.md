@@ -87,7 +87,7 @@ Nuestro juego destaca frente a otros debido a que vamos a incluir distintos mapa
 
 > *Rúbrica — Jugabilidad / Objetivo del juego:* debe estar claramente definido.
 
-El objetivo de cada jugador es destruir el tanque enemigo y evitar que el rival acabe contigo. La partida termina cuando uno de los dos tanques destruye el tanque rival. Gana el jugador que no sea destruido.
+El objetivo de cada jugador es destruir el tanque enemigo y evitar que el rival acabe contigo. La partida termina cuando uno de los dos tanques destruye el tanque rival. Gana el jugador que consiga eliminar al contrario dos veces.
 
 ### 3.2. Controles
 
@@ -117,13 +117,15 @@ El objetivo de cada jugador es destruir el tanque enemigo y evitar que el rival 
 
 | Objeto | Efecto | Duración | Aparición |
 | :--- | :--- | :---: | :--- |
-| AAA | AAA AAA AAA | 5 s | Aleatoria cada 15 s |
-| BBB | BBB BBB BBB | 10 s | Zona central del mapa |
-| CCC | CCC CCC CCC | Instantáneo | Al derrotar a un enemigo |
+| Disparo explosivo | Disminuye el alcance del disparo, pero inflige daño en una pequeña área | 15 s | Aleatoria con tiempo indeterminado |
+| Barrera | Mientras este activa el tanque no puede recibir daño | 10 s | Aleatoria con tiempo indeterminado |
+| Disparo triple | Dispara tres balas, una hacia delante y dos ligeramente giradas hacia cada lado | 15 s | Aleatoria con tiempo indeterminado |
+| Rebote | Las balas disparadas tienen la capacidad de rebotar una vez en las paredes | 15 s | Aleatoria con tiempo indeterminado |
+| Más cadencia | Aumenta la cadencia de disparo pero disminuye el daño | 15 s | Aleatoria con tiempo indeterminado |
 
 #### 3.3.3. Sistema de puntuación
 
-AAA AAA AAA AAA (p. ej. +10 puntos por AAA, −5 por BBB).
+Al acabar con el jugador contrario se conseguirá un punto. Gana el jugador que consiga dos puntos.
 
 ### 3.4. Físicas y dificultad
 
