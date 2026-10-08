@@ -166,7 +166,7 @@ AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA.
 
 #### Tanque azul (Jugador 1)
 
-<img src="img/personaje_1.png" alt="Boceto del personaje AAA" width="250">
+<img src="img/tanque rojo.png" alt="Boceto del personaje AAA" width="250">
 
 - **Edad / origen:** 58 años.
 - **Personalidad:** es un puto tanque.
@@ -176,7 +176,7 @@ AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA.
 
 #### BBB (Jugador 2)
 
-<img src="img/personaje_2.png" alt="Boceto del personaje BBB" width="250">
+<img src="img/tanque azul.png" alt="Boceto del personaje BBB" width="250">
 
 - **Edad / origen:** BBB.
 - **Personalidad:** BBB BBB BBB.
