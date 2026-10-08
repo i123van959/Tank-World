@@ -164,31 +164,14 @@ AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA.
 
 ### 4.2. Personajes
 
-#### Tanque azul (Jugador 1)
+#### Tanque rojo (Jugador 1)
 
 <img src="img/tanque rojo.png" alt="Boceto del personaje AAA" width="250">
 
-- **Edad / origen:** 58 años.
-- **Personalidad:** es un puto tanque.
-- **Motivación:** suicidatesr.
-- **Habilidad especial:** ser igual que le roo.
-- **Trasfondo:** sigue siendo un puto tanque.
 
-#### BBB (Jugador 2)
+#### Tanque azul (Jugador 2)
 
 <img src="img/tanque azul.png" alt="Boceto del personaje BBB" width="250">
-
-- **Edad / origen:** BBB.
-- **Personalidad:** BBB BBB BBB.
-- **Motivación:** BBB BBB BBB.
-- **Habilidad especial:** BBB BBB BBB.
-- **Trasfondo:** BBB BBB BBB BBB BBB BBB BBB BBB BBB.
-
-#### CCC (enemigo / personaje no jugable)
-
-<img src="img/enemigo_1.png" alt="Boceto del enemigo CCC" width="250">
-
-CCC CCC CCC CCC CCC CCC CCC CCC.
 
 ---
 
