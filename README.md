@@ -9,18 +9,17 @@
 
 ## Descripción de la temática
 
-AAA es un juego de AAA en 2D para dos jugadores en red en el que AAA AAA AAA AAA. Ambientado en AAA, los jugadores deben AAA AAA AAA para AAA AAA.
+Tank World es un juego de AAA en 2D para dos jugadores en red en el que AAA AAA AAA AAA. Ambientado en AAA, los jugadores deben AAA AAA AAA para AAA AAA.
 
 ## Equipo de desarrollo
 
 | Nombre y apellidos | Correo URJC | GitHub |
 | :--- | :--- | :--- |
-| Alumna Uno Ejemplo | a.uno.20XX@alumnos.urjc.es | `@alumno1-ejemplo` |
-| Alumno Dos Ejemplo | a.dos.20XX@alumnos.urjc.es | `@alumno2-ejemplo` |
-| Alumna Tres Ejemplo | a.tres.20XX@alumnos.urjc.es | `@alumno3-ejemplo` |
-| Alumno Cuatro Ejemplo | a.cuatro.20XX@alumnos.urjc.es | `@alumno4-ejemplo` |
+| Víctor Bellón Casado | v.bellon.2024@alumnos.urjc.es | `@Victor-282006` |
+| Daniel Jiménez Gómez | d.jimenezg.2024@alumnos.urjc.es | `@Dajigo333` |
+| Iván Herrerín González | i.herrerin.2024@alumnos.urjc.es | `@i123van959` |
 
-**Repositorio:** `https://github.com/<usuario>/<repositorio>`
+**Repositorio:** `https://[github.com/i123van959/Tank-World]`
 
 **Licencia:** [Apache 2.0](LICENSE)
 
