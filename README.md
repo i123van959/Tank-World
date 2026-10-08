@@ -51,11 +51,11 @@ Tank World es un juego party para dos jugadores en el que dos tanques se tienen 
 
 ### 1.2. Propuesta de valor
 
-¿Qué hace diferente a vuestro juego? que esta dirigido a maricones.
+Nuestro juego destaca frente a otros debido a que vamos a incluir distintos mapas, cada uno con una ambientación única. Además vamos a incluir distintos potenciadores que harán de cada partida única. Y por último tendrá una estética atractiva que, aunque sea un juego de tanques que recuerde a la guerra, se distinguirá en todo momento que es todo un escenario montado por juguetes.
 
-- Característica diferencial 1: AAA.
-- Característica diferencial 2: BBB.
-- Característica diferencial 3: CCC.
+- Característica diferencial 1: Mapas variados.
+- Característica diferencial 2: Potenciadores.
+- Característica diferencial 3: Estética atractiva de juguetes.
 
 ![Imagen promocional / key art del juego](img/portada_presentacion.png)
 
