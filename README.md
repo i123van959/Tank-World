@@ -247,22 +247,13 @@ Los bocetos de los personajes se encuentran en el apartado [4.2](#42-personajes)
 
 ![Boceto del menú principal](img/boceto_menu_principal.png)
 
-*Figura 6. Menú principal: AAA AAA AAA.*
+*Figura 6. Menú principal.*
 
 **Pantalla de juego (HUD)**
 
 ![Boceto de la pantalla de juego](img/boceto_pantalla_juego.png)
 
-*Figura 7. Pantalla de juego: AAA AAA AAA.*
-
-**Ajustes y fin de partida**
-
-<p align="center">
-  <img src="img/boceto_ajustes.png" alt="Boceto de ajustes" width="45%">
-  <img src="img/boceto_fin_partida.png" alt="Boceto de fin de partida" width="45%">
-</p>
-
-*Figura 8. Pantalla de ajustes (izquierda) y fin de partida (derecha).*
+*Figura 7. Pantalla de juego.*
 
 ### 7.2. Diagrama de flujo
 
