@@ -302,8 +302,10 @@ flowchart TD
     H -->|Salir| B
     G -->|El jugador 1 consigue 3 puntos| I[Gana el jugador 1]
     G -->|El jugador 2 consigue 3 puntos| J[Gana el jugador 2]
-    I -->|Revancha| G
+    I -->|jugar otra vez| G
+    J -->|jugar otra vez| G
     I -->|Volver| B
+    J -->|Volver| B
 ```
 
 **Opción 2 — Imagen** exportada desde draw.io, Excalidraw, Figma...:
