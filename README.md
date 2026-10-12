@@ -187,8 +187,8 @@ El juego utiliza un estilo **cartoon** porque da mayor sensación de que sea un 
 - El juego usara principalmente colores llamativos para los escenarios y objetos similar a los usados en juguetes.
 - El jugador 1 se vera representado por una paleta de colores rojos y el jugador 2 se vera representados por una paleta de colores azules.
 
-![Paleta de colores](img/paleta_colores J1.png)
-![Paleta de colores](img/paleta_colores J2.png)
+![Paleta de colores](img/paleta_coloresJ1.png)
+![Paleta de colores](img/paleta_coloresJ2.png)
 
 *Figura 4. Paleta de colores del juego.*
 
