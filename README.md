@@ -125,7 +125,7 @@ El objetivo de cada jugador es destruir el tanque enemigo y evitar que el rival 
 
 #### 3.3.3. Sistema de puntuación
 
-Al acabar con el jugador contrario se conseguirá un punto. Gana el jugador que consiga dos puntos.
+Al acabar con el jugador contrario se conseguirá un punto. Gana el jugador que consiga tres puntos.
 
 ### 3.4. Físicas y dificultad
 
@@ -140,11 +140,11 @@ Al acabar con el jugador contrario se conseguirá un punto. Gana el jugador que 
 
 > *Rúbrica — Jugabilidad / Calidad del escenario.*
 
-El escenario representa una habitación de un niño. Se compone de 1 zonas:
+El escenario representa una habitación de un niño. Se compone de 3 zonas que se diferencian por los bloques que hacen de muro:
 
-1. **Zona 1:** AAA AAA AAA.
-2. **Zona BBB:** BBB BBB BBB.
-3. **Zona CCC:** CCC CCC CCC.
+1. **Zona 1: la parte de la izquierda donde aparece el jugador 1.
+2. **zona 2: el centro del escenario donde se cruzan ambos jugadores .
+3. **Zona 3: la parte de la derecha donde aparece el jugador 2.
 
 ![Mapa del escenario](img/mapa_escenario.png)
 
