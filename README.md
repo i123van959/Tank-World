@@ -39,7 +39,6 @@ Tank World es un juego party en 2D para dos jugadores en red en el que dos tanqu
 8. [Comunicación y marketing](#8-comunicación-y-marketing)
 9. [Referencias](#9-referencias)
 
-> **Nota para el alumnado:** este documento es una **plantilla de ejemplo**. Sustituid todos los textos `AAA`, `BBB`, `CCC`... y las imágenes de `img/` por vuestro contenido. Los bloques como este, que empiezan por *Rúbrica*, indican qué criterio de evaluación cubre cada apartado: **borradlos antes de entregar**. Límite orientativo: **3500 palabras**. Todo el documento debe estar en castellano (mezclar idiomas penaliza).
 
 ---
 
@@ -65,7 +64,6 @@ Nuestro juego destaca frente a otros debido a que vamos a incluir distintos mapa
 
 ## 2. Especificaciones básicas
 
-> *Rúbrica — Documento / Especificaciones básicas:* género, público objetivo/edad y plataforma.
 
 | Aspecto | Descripción |
 | :--- | :--- |
@@ -85,13 +83,11 @@ Nuestro juego destaca frente a otros debido a que vamos a incluir distintos mapa
 
 ### 3.1. Objetivo del juego
 
-> *Rúbrica — Jugabilidad / Objetivo del juego:* debe estar claramente definido.
 
 El objetivo de cada jugador es destruir el tanque enemigo y evitar que el rival acabe contigo. La partida termina cuando uno de los dos tanques destruye el tanque rival. Gana el jugador que consiga eliminar al contrario dos veces.
 
 ### 3.2. Controles
 
-> *Rúbrica — Jugabilidad / Controles.* Indicad teclado y ratón.
 
 | Acción | Jugador 1 | Jugador 2 |
 | :--- | :---: | :---: |
@@ -105,7 +101,6 @@ El objetivo de cada jugador es destruir el tanque enemigo y evitar que el rival 
 
 ### 3.3. Mecánicas
 
-> *Rúbrica — Jugabilidad / Mecánicas.*
 
 #### 3.3.1. Mecánicas principales
 
@@ -129,7 +124,6 @@ Al acabar con el jugador contrario se conseguirá un punto. Gana el jugador que 
 
 ### 3.4. Físicas y dificultad
 
-> *Rúbrica — Jugabilidad / Físicas:* físicas variadas con elementos de dificultad.
 
 - **Colisiones:** entre proyectiles, obstáculos y jugadores.
 - **Rebotes:** con el potenciador de rebote las balas rebotaran con los obstáculos.
@@ -138,7 +132,7 @@ Al acabar con el jugador contrario se conseguirá un punto. Gana el jugador que 
 
 ### 3.5. Escenario
 
-> *Rúbrica — Jugabilidad / Calidad del escenario.*
+
 
 El escenario representa una habitación de un niño. Se compone de 3 zonas que se diferencian por los bloques que hacen de muro:
 
@@ -154,7 +148,7 @@ El escenario representa una habitación de un niño. Se compone de 3 zonas que s
 
 ## 4. Narrativa
 
-> *Rúbrica — Narrativa:* riqueza de la historia principal y de los personajes.
+
 
 ### 4.1. Historia
 
@@ -179,33 +173,26 @@ AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA.
 
 ### 5.1. Logotipo
 
-> *Rúbrica — Imagen / Logotipo.*
 
 ![Logotipo del juego](img/logo.png)
 
-*Figura 3. Logotipo del juego. Tipografía: AAA. Concepto: AAA AAA AAA.*
+*Figura 3. Logotipo del juego.*
 
 ### 5.2. Estilo visual
 
-> *Rúbrica — Imagen / Estilo visual:* pixel art, cartoon, vectorial, etc.
 
 El juego utiliza un estilo **cartoon** porque da mayor sensación de que sea un juego de dos niños, en vez de una guerra real.
 
 ### 5.3. Uso de colores
-
-> *Rúbrica — Imagen / Descripción visual:* uso de colores.
+- El juego usara principalmente colores llamativos para los escenarios y objetos similar a los usados en juguetes.
+- El jugador 1 se vera representado por una paleta de colores rojos y el jugador 2 se vera representados por una paleta de colores azules.
 
 ![Paleta de colores](img/paleta_colores.png)
 
 *Figura 4. Paleta de colores del juego.*
 
-- **Fondo (`#1B1F3B`):** AAA AAA AAA.
-- **Jugador 1 (`#E94560`) / Jugador 2 (`#0F9BD7`):** colores complementarios para distinguir fácilmente a cada jugador.
-- **Objetos (`#F5C518`):** AAA AAA AAA.
-
 ### 5.4. Aspectos técnicos: cámara y representación
 
-> *Rúbrica — Imagen / Aspectos técnicos:* uso de cámara y 2D/3D.
 
 - **Representación:** 2D, vista cenital.
 - **Cámara:** fija mostrando el escenario.
@@ -225,15 +212,12 @@ El juego utiliza un estilo **cartoon** porque da mayor sensación de que sea un 
 
 ### 5.6. Bocetos de personajes y pantallas
 
-> *Rúbrica — Imagen / Bocetos:* interfaz de menú, pantallas y personajes.
-
 Los bocetos de los personajes se encuentran en el apartado [4.2](#42-personajes) y los de las pantallas en el apartado [7.1](#71-pantallas).
 
 ---
 
 ## 6. Sonido
 
-> *Rúbrica — Sonido:* música y efectos.
 
 ### 6.1. Banda sonora
 
@@ -282,7 +266,6 @@ Los bocetos de los personajes se encuentran en el apartado [4.2](#42-personajes)
 
 ### 7.2. Diagrama de flujo
 
-> *Rúbrica — Documento / Diagrama de flujo.* Podéis usar Mermaid (GitHub lo renderiza directamente) o una imagen exportada.
 
 ```mermaid
 flowchart TD
@@ -308,12 +291,9 @@ flowchart TD
 
 ## 8. Comunicación y marketing
 
-> *Rúbrica — Comunicación / Marketing.*
 
 - **Público y mensaje clave:** AAA AAA AAA.
-- **Canales:** redes sociales (AAA, BBB), itch.io, Newgrounds, Game Jolt...
-- **Calendario:** *teaser* en AAA, *devlog* semanal en AAA, lanzamiento en AAA.
-- **Material:** tráiler, capturas, GIF de jugabilidad, *press kit*.
+- **Canales:** redes sociales (instagram, you-tube,tik tok), itch.io, Newgrounds.
 - **Eslogan:** «AAA AAA AAA».
 
 ---
