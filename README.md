@@ -205,9 +205,7 @@ El juego utiliza un estilo **cartoon** porque da mayor sensación de que sea un 
 
 *Figura 6. Moodboard con las referencias visuales.*
 
-- **AAA** (videojuego, año): tomamos AAA AAA AAA [1].
-- **BBB** (película / cómic / movimiento artístico): BBB BBB BBB [2].
-- **CCC** (referencia cultural): CCC CCC CCC.
+- **Wii play (2006)**
 
 ### 5.6. Bocetos de personajes y pantallas
 
