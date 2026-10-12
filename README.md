@@ -289,9 +289,9 @@ Los bocetos de los personajes se encuentran en el apartado [4.2](#42-personajes)
 ```mermaid
 flowchart TD
     A[Pantalla de carga] --> B[Menú principal]
-    B --> C[Jugar]
-    B --> D[Ajustes]
-    B --> E[Ayuda]
+    B --> C[Juego local]
+    B --> D[Juego en linea] 
+    B --> E[Ajustes]
     B --> F[Créditos]
     D --> B
     E --> B
@@ -300,7 +300,8 @@ flowchart TD
     G -->|Esc| H[Pausa]
     H -->|Reanudar| G
     H -->|Salir| B
-    G -->|Condición de victoria| I[Fin de partida]
+    G -->|El jugador 1 consigue 3 puntos| I[Gana el jugador 1]
+    G -->|El jugador 2 consigue 3 puntos| J[Gana el jugador 2]
     I -->|Revancha| G
     I -->|Volver| B
 ```
