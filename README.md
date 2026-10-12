@@ -284,8 +284,6 @@ Los bocetos de los personajes se encuentran en el apartado [4.2](#42-personajes)
 
 > *Rúbrica — Documento / Diagrama de flujo.* Podéis usar Mermaid (GitHub lo renderiza directamente) o una imagen exportada.
 
-**Opción 1 — Mermaid** (se dibuja automáticamente en GitHub):
-
 ```mermaid
 flowchart TD
     A[Pantalla de carga] --> B[Menú principal]
@@ -307,14 +305,6 @@ flowchart TD
     I -->|Volver| B
     J -->|Volver| B
 ```
-
-**Opción 2 — Imagen** exportada desde draw.io, Excalidraw, Figma...:
-
-![Diagrama de flujo del juego](img/diagrama_flujo.png)
-
-*Figura 9. Diagrama de flujo entre pantallas.*
-
----
 
 ## 8. Comunicación y marketing
 
