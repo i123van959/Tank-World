@@ -190,7 +190,7 @@ El juego utiliza un estilo **cartoon** porque da mayor sensación de que sea un 
 ![Paleta de colores](img/paleta_coloresJ1.png)
 ![Paleta de colores](img/paleta_coloresJ2.png)
 
-*Figura 4. Paleta de colores del juego.*
+*Figura 4 y 5. Paletas de colores del jugador 1 y 2 respectivamente.*
 
 ### 5.4. Aspectos técnicos: cámara y representación
 
@@ -201,11 +201,9 @@ El juego utiliza un estilo **cartoon** porque da mayor sensación de que sea un 
 
 ### 5.5. Inspiración artística y cultural
 
-> *Rúbrica — Imagen / Inspiración:* referentes artísticos y culturales y vínculo con otros trabajos.
-
 ![Moodboard de inspiración](img/moodboard_inspiracion.png)
 
-*Figura 5. Moodboard con las referencias visuales.*
+*Figura 6. Moodboard con las referencias visuales.*
 
 - **AAA** (videojuego, año): tomamos AAA AAA AAA [1].
 - **BBB** (película / cómic / movimiento artístico): BBB BBB BBB [2].
@@ -248,13 +246,13 @@ Los bocetos de los personajes se encuentran en el apartado [4.2](#42-personajes)
 
 ![Boceto del menú principal](img/boceto_menu_principal.png)
 
-*Figura 6. Menú principal.*
+*Figura 7. Menú principal.*
 
 **Pantalla de juego (HUD)**
 
 ![Boceto de la pantalla de juego](img/boceto_pantalla_juego.png)
 
-*Figura 7. Pantalla de juego.*
+*Figura 8. Pantalla de juego.*
 
 ### 7.2. Diagrama de flujo
 
