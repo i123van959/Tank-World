@@ -159,11 +159,19 @@ Dos hermanos que estaban visitando la casa de sus abuelos deciden buscar algo pa
 
 <img src="img/tanque rojo.png" alt="Boceto del personaje AAA" width="250">
 
+- **Edad / origen:** 8 años.
+- **Personalidad:** Competitivo.
+- **Motivación:** Ganar a su hermano en el juego.
+- **Trasfondo:** Es el hermano pequeño. Quiere ganar a su hermano siempre para intentar ser mejor que él. 
 
 #### Tanque azul (Jugador 2)
 
 <img src="img/tanque azul.png" alt="Boceto del personaje BBB" width="250">
 
+- **Edad / origen:** 10 años.
+- **Personalidad:** Empático.
+- **Motivación:** Que su hermano se divierta.
+- **Trasfondo:** Es el hermano mayor. Intenta jugar con su hermano siempre que pueda para que no se aburra. Le gusta jugar con su hermano por mero entretenimiento, pero no se deja ganar por él.
 ---
 
 ## 5. Imagen y diseño visual
