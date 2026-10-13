@@ -151,10 +151,7 @@ El escenario representa una habitación de un niño. Se compone de 3 zonas que s
 
 
 ### 4.1. Historia
-
-AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA.
-
-AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA.
+Dos hermanos que estaban visitando la casa de sus abuelos deciden buscar algo para entretenerse entre los juguetes antiguos del desván y encuentran una caja con dos tanques en la tapa. Al abrirla encuentran dos tanques con balas de plastico para cargarlos y deciden crear su propio escenario para jugar.
 
 ### 4.2. Personajes
 
@@ -197,7 +194,7 @@ El juego utiliza un estilo **cartoon** porque da mayor sensación de que sea un 
 
 - **Representación:** 2D, vista cenital.
 - **Cámara:** fija mostrando el escenario.
-- **Resolución base:** AAA × AAA píxeles.
+- **Resolución base:** 1920 x 1080 pixeles.
 
 ### 5.5. Inspiración artística y cultural
 
