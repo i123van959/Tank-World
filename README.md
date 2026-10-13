@@ -228,11 +228,11 @@ Los bocetos de los personajes se encuentran en el apartado [4.2](#42-personajes)
 
 | Efecto | Momento en que se reproduce |
 | :--- | :--- |
-| Salto | Al pulsar la tecla de salto |
-| Golpe / impacto | AAA |
-| Recoger objeto | AAA |
+| Disapro | Al pulsar la tecla de disparo |
+| Golpe / impacto | Al acertar un disparo o recibir daño |
+| Activar potenciador | Al activar un potenciador |
 | Botones de la interfaz | Al pasar el ratón y al hacer clic |
-| Cuenta atrás | AAA |
+| Aparición de potenciador | Al aparecer un potenciador en el mapa |
 
 ---
 
