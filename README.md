@@ -84,7 +84,7 @@ Nuestro juego destaca frente a otros debido a que vamos a incluir distintos mapa
 ### 3.1. Objetivo del juego
 
 
-El objetivo de cada jugador es destruir el tanque enemigo y evitar que el rival acabe contigo. La partida termina cuando uno de los dos tanques destruye el tanque rival. Gana el jugador que consiga eliminar al contrario dos veces.
+El objetivo de cada jugador es destruir el tanque enemigo y evitar que el rival acabe contigo. La partida termina cuando uno de los dos tanques destruye el tanque rival. Gana el jugador que consiga eliminar al contrario tres veces.
 
 ### 3.2. Controles
 
