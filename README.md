@@ -293,5 +293,10 @@ flowchart TD
 
 ## 9. Referencias
 
-[1] WII play (2006). Nintendo
+-[1] WII play (2006). Nintendo
 
+-[2] game 8 bit (de Inono777) https://pixabay.com/es/music/optimista-game-8-bit-399898/ .
+
+-[3] Retro 1(Short Form BGM) (de BLACKBOX) https://pixabay.com/es/music/electro-black-box-retro-1short-form-bgm-486334/ .
+
+-[4] Retro game arcade (de moodmode) https://pixabay.com/es/music/video-juegos-retro-game-arcade-236133/ .
