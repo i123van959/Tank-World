@@ -227,7 +227,7 @@ Los bocetos de los personajes se encuentran en el apartado [4.2](#42-personajes)
 | :--- | :--- | :--- | :--- |
 | Retro 1(Short form BGM)| Menú Principal| Arcade, Animado, ritmo medio/rapido| BLACKBOX|
 | Game 8 bit| Partida | Arcade 8 bit, ritmo muy rapido | Inono777 |
-| Retro Game Music| Victoria / derrota | Chiptune, Alegre, ritmo rapido| Vlad Krotov|
+| Retro Game Music| Victoria / derrota | Chiptune, Alegre, ritmo rapido| Moodmode|
 
 ### 6.2. Efectos de sonido
 
