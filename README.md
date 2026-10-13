@@ -280,9 +280,9 @@ flowchart TD
 ## 8. Comunicación y marketing
 
 
-- **Público y mensaje clave:** AAA AAA AAA.
+- **Público y mensaje clave:** Jugadores casuales de todas las edades. Partidas cortas y frénitcas.
 - **Canales:** redes sociales (instagram, you-tube,tik tok), itch.io, Newgrounds.
-- **Eslogan:** «AAA AAA AAA».
+- **Eslogan:** «Partidas cortas, diversión en cualquier momento».
 
 ---
 
