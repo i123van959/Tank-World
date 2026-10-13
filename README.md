@@ -225,9 +225,9 @@ Los bocetos de los personajes se encuentran en el apartado [4.2](#42-personajes)
 
 | Pista | Escena | Estilo / ambiente | Fuente / licencia |
 | :--- | :--- | :--- | :--- |
-| AAA | Menú principal | AAA (p. ej. *chiptune* relajado) | AAA (propia / CC-BY...) |
-| BBB | Partida | BBB (p. ej. ritmo rápido, 140 BPM) | BBB |
-| CCC | Victoria / derrota | CCC | CCC |
+| Retro 1(Short form BGM)| Menú Principal| Arcade, Animado, ritmo medio/rapido| BLACKBOX|
+| Game 8 bit| Partida | Arcade 8 bit, ritmo muy rapido | Inono777 |
+| Retro Game Music| Victoria / derrota | Chiptune, Alegre, ritmo rapido| Vlad Krotov|
 
 ### 6.2. Efectos de sonido
 
