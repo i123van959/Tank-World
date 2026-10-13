@@ -19,7 +19,7 @@ Tank World es un juego party en 2D para dos jugadores en red en el que dos tanqu
 | Daniel Jiménez Gómez | d.jimenezg.2024@alumnos.urjc.es | `@Dajigo333` |
 | Iván Herrerín González | i.herrerin.2024@alumnos.urjc.es | `@i123van959` |
 
-**Repositorio:** `https://[github.com/i123van959/Tank-World]`
+**Repositorio:** https://github.com/i123van959/Tank-World
 
 **Licencia:** [Apache 2.0](LICENSE)
 
