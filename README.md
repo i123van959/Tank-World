@@ -293,14 +293,5 @@ flowchart TD
 
 ## 9. Referencias
 
-> *Rúbrica — Documento / Referencias.* Usad un formato consistente (p. ej. APA) y citadlas en el texto con [1], [2]...
+[1] WII play (2006). Nintendo
 
-[1] AAA, A. (Año). *Título de la obra*. Editorial / Estudio. URL
-
-[2] BBB, B. (Año). *Título del artículo*. Revista, volumen(número), páginas. https://doi.org/AAA
-
-[3] Schell, J. (2019). *The Art of Game Design: A Book of Lenses* (3.ª ed.). CRC Press.
-
-[4] Phaser Studio. (s. f.). *Phaser 3 Documentation*. https://docs.phaser.io
-
-[5] Recursos de terceros utilizados (sprites, música, fuentes): AAA — autor — licencia — URL.
