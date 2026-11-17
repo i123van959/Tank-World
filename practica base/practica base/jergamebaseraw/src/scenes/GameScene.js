@@ -97,6 +97,10 @@ export class GameScene extends Phaser.Scene {
         }));
     }
 
+    shoot(paddle){
+        const proyectile = new Ball(this, 'player3', paddle.sprite.x, paddle.sprite.y);
+    }
+
     resetBall() {
         this.ball.setVelocity(0, 0);
         this.ball.setPosition(400, 300);
@@ -160,6 +164,7 @@ export class GameScene extends Phaser.Scene {
     update(time, delta) {
         const turnSpeed = 3;
         const dt = delta / 1000;
+        const coolDown = 20;
 
         this.inputMappings.forEach(mapping => {
             const paddle = mapping.paddle;
@@ -184,10 +189,19 @@ export class GameScene extends Phaser.Scene {
                 paddle.sprite.setVelocity(0,0);
             }
 
-            if (mapping.actKey.isDown){
-                const player3 = new Ball(this, 'player3', paddle.sprite.x, paddle.sprite.y);
+            if (Phaser.Input.Keyboard.JustDown(mapping.actKey)){
+                if (coolDown == 20){
+                    this.shoot(paddle);
+                }
             }
         });
+
+        if (!coolDown == 20){
+            coolDown--;
+            if(coolDown == 0){
+                coolDown == 20;
+            }
+        }
 
         // Game loop
         if (this.ball.x < 0) {
