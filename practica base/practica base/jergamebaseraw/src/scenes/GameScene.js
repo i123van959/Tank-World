@@ -159,60 +159,25 @@ export class GameScene extends Phaser.Scene {
         this.inputMappings.forEach(mapping => {
             const paddle = mapping.paddle;
 
-            if (mapping.upKey.isDown) {
-                
-                if(paddle.direction==0){
-                    paddle.sprite.setVelocityX(+paddle.speed);
-                }else if(paddle.direction==(-Math.PI/4)){
-                    paddle.sprite.setVelocityX(+paddle.speed);
-                    paddle.sprite.setVelocityY(-paddle.speed);
-                }else if(paddle.direction==(-Math.PI/2)){
-                    //paddle.sprite.setVelocityX(+paddle.speed);
-                    paddle.sprite.setVelocityY(-paddle.speed);
-                }else if(paddle.direction==(-Math.PI*3/4)){
-                    paddle.sprite.setVelocityX(-paddle.speed);
-                    paddle.sprite.setVelocityY(+paddle.speed);
-                }else if(paddle.direction==(-Math.PI)){
-                    paddle.sprite.setVelocityX(-paddle.speed);
-                    //paddle.sprite.setVelocityY(-paddle.speed);
-                }else if(paddle.direction==(Math.PI/4)){
-                    paddle.sprite.setVelocityX(+paddle.speed);
-                    paddle.sprite.setVelocityY(+paddle.speed);
-                }else if(paddle.direction==(Math.PI/2)){
-                    //paddle.sprite.setVelocityX(+paddle.speed);
-                    paddle.sprite.setVelocityY(+paddle.speed);
-                }else if(paddle.direction==(Math.PI*3/4)){
-                    paddle.sprite.setVelocityX(-paddle.speed);
-                    paddle.sprite.setVelocityY(+paddle.speed);
-                }
+            if (Phaser.Input.Keyboard.JustDown(mapping.leftKey)){
+                paddle.sprite.rotation -= Math.PI / 4;
+            } else if (Phaser.Input.Keyboard.JustDown(mapping.rightKey)) {
+                paddle.sprite.rotation += Math.PI / 4;
+            }
+
+            if (mapping.upKey.isDown){
+                paddle.sprite.setVelocity(
+                    Math.cos(paddle.sprite.rotation) * paddle.speed,
+                    Math.sin(paddle.sprite.rotation) * paddle.speed
+                );
             } else if (mapping.downKey.isDown) {
-                paddle.sprite.setVelocityY(paddle.speed);
-            } else {
-                paddle.sprite.setVelocityY(0);
-                paddle.sprite.setVelocityX(0);
+                paddle.sprite.setVelocity(
+                    -Math.cos(paddle.sprite.rotation) * paddle.speed,
+                    -Math.sin(paddle.sprite.rotation) * paddle.speed
+                );
+            } else{
+                paddle.sprite.setVelocity(0,0);
             }
-
-            if (mapping.leftKey.isDown) {
-                //paddle.sprite.setVelocityX(-paddle.speed);
-                if(paddle.rotated==false){
-                    paddle.direction=paddle.direction+(Math.PI/4);
-                    paddle.sprite.rotation=paddle.direction;
-                    paddle.rotated=true;
-                }
-            } else if (mapping.rightKey.isDown) {
-                //paddle.sprite.setVelocityX(paddle.speed);
-                if(paddle.rotated==false){
-                    paddle.direction=paddle.direction-(Math.PI/4);
-                    paddle.sprite.rotation=paddle.direction;
-                    paddle.rotated=true;
-                }
-            }else if(mapping.rightKey.isUp||mapping.leftKey.isUp){
-                paddle.rotated=false;
-            }else {
-                paddle.sprite.setVelocityX(0);
-            }
-
-            
         });
 
         // Game loop
