@@ -49,7 +49,7 @@ export class GameScene extends Phaser.Scene {
         this.scoreRight = this.add.text(600, 50, '0', { fontSize: '48px' }).setOrigin(0.5);
 
         // Collisions on all sides 
-        this.physics.world.setBoundsCollision(false, false, true, true);
+        this.physics.world.setBoundsCollision(true, true, true, true);
 
         // Create the box
         this.createBall();
@@ -155,14 +155,16 @@ export class GameScene extends Phaser.Scene {
     }
 
     update(time, delta) {
+        const turnSpeed = 3;
+        const dt = delta / 1000;
 
         this.inputMappings.forEach(mapping => {
             const paddle = mapping.paddle;
 
-            if (Phaser.Input.Keyboard.JustDown(mapping.leftKey)){
-                paddle.sprite.rotation -= Math.PI / 4;
-            } else if (Phaser.Input.Keyboard.JustDown(mapping.rightKey)) {
-                paddle.sprite.rotation += Math.PI / 4;
+            if (mapping.leftKey.isDown){
+                paddle.sprite.rotation -= turnSpeed * dt;
+            } else if (mapping.rightKey.isDown) {
+                paddle.sprite.rotation += turnSpeed * dt;
             }
 
             if (mapping.upKey.isDown){
