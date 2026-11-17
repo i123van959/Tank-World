@@ -1,5 +1,6 @@
 import Phaser from 'phaser';
 import { Paddle } from '../entities/Paddle';
+import { Ball } from '../entities/Ball';
 
 export class GameScene extends Phaser.Scene {
     constructor() {
@@ -77,10 +78,11 @@ export class GameScene extends Phaser.Scene {
     setUpPlayers() {
         const player1 = new Paddle(this, 'player1', 50, 300);
         const player2 = new Paddle(this, 'player2', 750, 300);
+        const player3 = new Ball(this, 'player3', 200, 200);
 
         this.players.set(player1.id, player1);
         this.players.set(player2.id, player2);
-
+        this.players.set(player3.id, player3);
         const Keys = Phaser.Input.Keyboard.KeyCodes;
         this.inputMappings = [
             { paddle: player1, up: Keys.W, down: Keys.S, right: Keys.D, left: Keys.A },
