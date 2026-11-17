@@ -105,11 +105,11 @@ export class GameScene extends Phaser.Scene {
         const speed = 400;
         const direction = Math.random() < 0.5 ? 1 : -1;
 
-        const speedX = Math.cos(Phaser.Math.DegToRad(angle)) * speed * direction;
-        const speedY = Math.sin(Phaser.Math.DegToRad(angle)) * speed;
-        this.ball.setVelocity(
-            speedX, speedY
-        );
+        //const speedX = Math.cos(Phaser.Math.DegToRad(angle)) * speed * direction;
+        //const speedY = Math.sin(Phaser.Math.DegToRad(angle)) * speed;
+        //this.ball.setVelocity(
+        //    speedX, speedY
+        //);
     }
 
     createBall() {
@@ -160,11 +160,36 @@ export class GameScene extends Phaser.Scene {
             const paddle = mapping.paddle;
 
             if (mapping.upKey.isDown) {
-                paddle.sprite.setVelocityY(-paddle.speed);
+                
+                if(paddle.direction==0){
+                    paddle.sprite.setVelocityX(+paddle.speed);
+                }else if(paddle.direction==(-Math.PI/4)){
+                    paddle.sprite.setVelocityX(+paddle.speed);
+                    paddle.sprite.setVelocityY(-paddle.speed);
+                }else if(paddle.direction==(-Math.PI/2)){
+                    //paddle.sprite.setVelocityX(+paddle.speed);
+                    paddle.sprite.setVelocityY(-paddle.speed);
+                }else if(paddle.direction==(-Math.PI*3/4)){
+                    paddle.sprite.setVelocityX(-paddle.speed);
+                    paddle.sprite.setVelocityY(+paddle.speed);
+                }else if(paddle.direction==(-Math.PI)){
+                    paddle.sprite.setVelocityX(-paddle.speed);
+                    //paddle.sprite.setVelocityY(-paddle.speed);
+                }else if(paddle.direction==(Math.PI/4)){
+                    paddle.sprite.setVelocityX(+paddle.speed);
+                    paddle.sprite.setVelocityY(+paddle.speed);
+                }else if(paddle.direction==(Math.PI/2)){
+                    //paddle.sprite.setVelocityX(+paddle.speed);
+                    paddle.sprite.setVelocityY(+paddle.speed);
+                }else if(paddle.direction==(Math.PI*3/4)){
+                    paddle.sprite.setVelocityX(-paddle.speed);
+                    paddle.sprite.setVelocityY(+paddle.speed);
+                }
             } else if (mapping.downKey.isDown) {
                 paddle.sprite.setVelocityY(paddle.speed);
             } else {
                 paddle.sprite.setVelocityY(0);
+                paddle.sprite.setVelocityX(0);
             }
 
             if (mapping.leftKey.isDown) {
