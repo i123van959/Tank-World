@@ -9,7 +9,8 @@ export class Ball {
         this.rotated=false;
 
 
-        this.sprite = scene.physics.add.image(50, 50, 'ball');
+        this.sprite = scene.physics.add.image(x, y, 'ball');
+        this.sprite.setTint(0xff0000);
         this.sprite.setDisplaySize(20, 20);
         this.sprite.setImmovable(true);
         this.sprite.setCollideWorldBounds(true);

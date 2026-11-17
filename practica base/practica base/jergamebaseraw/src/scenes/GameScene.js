@@ -78,21 +78,22 @@ export class GameScene extends Phaser.Scene {
     setUpPlayers() {
         const player1 = new Paddle(this, 'player1', 50, 300);
         const player2 = new Paddle(this, 'player2', 750, 300);
-        const player3 = new Ball(this, 'player3', 200, 200);
+        
 
         this.players.set(player1.id, player1);
         this.players.set(player2.id, player2);
-        this.players.set(player3.id, player3);
+
         const Keys = Phaser.Input.Keyboard.KeyCodes;
         this.inputMappings = [
-            { paddle: player1, up: Keys.W, down: Keys.S, right: Keys.D, left: Keys.A },
-            { paddle: player2, up: Keys.UP, down: Keys.DOWN, right: Keys.RIGHT, left: Keys.LEFT }
+            { paddle: player1, up: Keys.W, down: Keys.S, right: Keys.D, left: Keys.A,act:Keys.F },
+            { paddle: player2, up: Keys.UP, down: Keys.DOWN, right: Keys.RIGHT, left: Keys.LEFT,act:Keys.SPACE }
         ].map(mapping => ({
             paddle: mapping.paddle,
             upKey: this.input.keyboard.addKey(mapping.up),
             downKey: this.input.keyboard.addKey(mapping.down),
             rightKey: this.input.keyboard.addKey(mapping.right),
-            leftKey: this.input.keyboard.addKey(mapping.left)
+            leftKey: this.input.keyboard.addKey(mapping.left),
+            actKey: this.input.keyboard.addKey(mapping.act)
         }));
     }
 
@@ -168,12 +169,12 @@ export class GameScene extends Phaser.Scene {
             } else if (mapping.rightKey.isDown) {
                 paddle.sprite.rotation += turnSpeed * dt;
             }
-
             if (mapping.upKey.isDown){
                 paddle.sprite.setVelocity(
                     Math.cos(paddle.sprite.rotation) * paddle.speed,
                     Math.sin(paddle.sprite.rotation) * paddle.speed
                 );
+                
             } else if (mapping.downKey.isDown) {
                 paddle.sprite.setVelocity(
                     -Math.cos(paddle.sprite.rotation) * paddle.speed,
@@ -181,6 +182,10 @@ export class GameScene extends Phaser.Scene {
                 );
             } else{
                 paddle.sprite.setVelocity(0,0);
+            }
+
+            if (mapping.actKey.isDown){
+                const player3 = new Ball(this, 'player3', paddle.sprite.x, paddle.sprite.y);
             }
         });
 
