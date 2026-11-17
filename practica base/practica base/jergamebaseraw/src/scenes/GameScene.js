@@ -93,7 +93,8 @@ export class GameScene extends Phaser.Scene {
             downKey: this.input.keyboard.addKey(mapping.down),
             rightKey: this.input.keyboard.addKey(mapping.right),
             leftKey: this.input.keyboard.addKey(mapping.left),
-            actKey: this.input.keyboard.addKey(mapping.act)
+            actKey: this.input.keyboard.addKey(mapping.act),
+            coolDown: 0
         }));
     }
 
@@ -164,10 +165,13 @@ export class GameScene extends Phaser.Scene {
     update(time, delta) {
         const turnSpeed = 3;
         const dt = delta / 1000;
-        const coolDown = 20;
 
         this.inputMappings.forEach(mapping => {
             const paddle = mapping.paddle;
+
+            if (mapping.coolDown > 0) {
+                mapping.coolDown -= delta;
+            }
 
             if (mapping.leftKey.isDown){
                 paddle.sprite.rotation -= turnSpeed * dt;
@@ -189,19 +193,11 @@ export class GameScene extends Phaser.Scene {
                 paddle.sprite.setVelocity(0,0);
             }
 
-            if (Phaser.Input.Keyboard.JustDown(mapping.actKey)){
-                if (coolDown == 20){
-                    this.shoot(paddle);
-                }
+            if (mapping.upKey.isDown && mapping.coolDown <= 0){
+                this.shoot(paddle);
+                mapping.coolDown = 1000;
             }
         });
-
-        if (!coolDown == 20){
-            coolDown--;
-            if(coolDown == 0){
-                coolDown == 20;
-            }
-        }
 
         // Game loop
         if (this.ball.x < 0) {
