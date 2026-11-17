@@ -100,6 +100,10 @@ export class GameScene extends Phaser.Scene {
 
     shoot(paddle){
         const proyectile = new Ball(this, 'player3', paddle.sprite.x, paddle.sprite.y);
+        proyectile.sprite.setVelocity(
+                    Math.cos(paddle.sprite.rotation) * (paddle.speed + 250),
+                    Math.sin(paddle.sprite.rotation) * (paddle.speed + 250)
+        );
     }
 
     resetBall() {
@@ -193,7 +197,7 @@ export class GameScene extends Phaser.Scene {
                 paddle.sprite.setVelocity(0,0);
             }
 
-            if (mapping.upKey.isDown && mapping.coolDown <= 0){
+            if (mapping.actKey.isDown && mapping.coolDown <= 0){
                 this.shoot(paddle);
                 mapping.coolDown = 1000;
             }
