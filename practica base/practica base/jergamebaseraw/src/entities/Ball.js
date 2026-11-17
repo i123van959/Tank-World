@@ -13,6 +13,6 @@ export class Ball {
         this.sprite.setTint(0xff0000);
         this.sprite.setDisplaySize(20, 20);
         this.sprite.setImmovable(true);
-        this.sprite.setCollideWorldBounds(true);
+        //this.sprite.setCollideWorldBounds(true);
     }
 }

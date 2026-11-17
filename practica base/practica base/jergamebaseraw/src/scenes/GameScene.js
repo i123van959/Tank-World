@@ -103,11 +103,24 @@ export class GameScene extends Phaser.Scene {
         const spawnX = paddle.sprite.x + Math.cos(paddle.sprite.rotation) * offset;
         const spawnY = paddle.sprite.y + Math.sin(paddle.sprite.rotation) * offset;
 
-        const proyectile = new Ball(this, 'player3', spawnX, spawnY);
+        const proyectile = new Ball(this, 'proyectile', spawnX, spawnY);
         proyectile.sprite.setVelocity(
                     Math.cos(paddle.sprite.rotation) * (paddle.speed + 250),
                     Math.sin(paddle.sprite.rotation) * (paddle.speed + 250)
         );
+
+        this.players.forEach(target => {
+        if (target.id === paddle.id) return;
+
+        this.physics.add.collider(proyectile.sprite, target.sprite, () => {
+            this.sound.play('hit');
+            proyectile.sprite.destroy();
+        });
+
+        if(proyectile.sprite.x > 700 || proyectile.sprite.x < 100 || proyectile.sprite.y > 500 || proyectile.y < 100){
+            proyectile.sprite.destroy();
+        }
+    });
     }
 
     resetBall() {
