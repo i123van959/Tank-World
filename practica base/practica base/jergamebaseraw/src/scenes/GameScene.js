@@ -107,12 +107,12 @@ export class GameScene extends Phaser.Scene {
     createBlocks(){
         const block1= new Block(this,'bloque 1',250,0,100,100,'bloque S',0x25d646);
         const block2= new Block(this,'bloque 2',250,600,100,100,'bloque S',0xff0004);
-        const block3= new Block(this,'bloque 3',250,460,100,100,'bloque S',0xff0004);
+        const block3= new Block(this,'bloque 3',250,460,100,100,'bloque S',0x75fff8);
         const block4= new Block(this,'bloque 4',250,370,100,100,'bloque S',0xffe803);
         const block5= new Block(this,'bloque 5',160,600,100,100,'bloque S',0x75fff8);
 
         const block6 = new Block(this, 'bloque 6', 550, 0,  100, 100, 'bloque S', 0x0086ff);
-        const block7 = new Block(this, 'bloque 7', 550, 140, 100, 100, 'bloque S', 0x0086ff);
+        const block7 = new Block(this, 'bloque 7', 550, 140, 100, 100, 'bloque S', 0xff75ea);
         const block8 = new Block(this, 'bloque 8', 550, 230, 100, 100, 'bloque S', 0x25d646);
         const block9 = new Block(this, 'bloque 9', 550, 600, 100, 100, 'bloque S', 0xffe803);
         const block10 = new Block(this, 'bloque 10', 640, 0, 100, 100, 'bloque S', 0xff75ea);
