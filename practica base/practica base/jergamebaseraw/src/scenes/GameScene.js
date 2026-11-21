@@ -15,7 +15,8 @@ export class GameScene extends Phaser.Scene {
 
     preload() {
         // Load assets
-        this.load.image('paddle', 'assets/images/paddle.png')
+        this.load.image('tanque_R', 'assets/images/tanque rojo.png')
+        this.load.image('tanque_A', 'assets/images/tanque azul.png')
 
         // Hit sound
         this.load.audio('hit', 'assets/audio/hit.mp3');
@@ -77,9 +78,9 @@ export class GameScene extends Phaser.Scene {
     }
 
     setUpPlayers() {
-        const player1 = new Paddle(this, 'player1', 50, 300);
-        const player2 = new Paddle(this, 'player2', 750, 300);
-
+        const player1 = new Paddle(this, 'player1', 50, 300,'tanque_R',1);
+        const player2 = new Paddle(this, 'player2', 750, 300,'tanque_A',2);
+        player2.sprite.rotation=Math.PI;
 
         this.players.set(player1.id, player1);
         this.players.set(player2.id, player2);
@@ -104,7 +105,7 @@ export class GameScene extends Phaser.Scene {
         const spawnX = paddle.sprite.x + Math.cos(paddle.sprite.rotation) * offset;
         const spawnY = paddle.sprite.y + Math.sin(paddle.sprite.rotation) * offset;
 
-        const proyectile = new Ball(this, 'proyectile', spawnX, spawnY);
+        const proyectile = new Ball(this, 'proyectile', spawnX, spawnY,paddle.team);
         this.balls.add(proyectile);
         proyectile.sprite.setVelocity(
             Math.cos(paddle.sprite.rotation) * (paddle.speed + 250),
