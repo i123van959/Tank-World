@@ -9,6 +9,7 @@ export class GameScene extends Phaser.Scene {
 
     init() {
         this.players = new Map();
+        this.balls = new Set();
         this.inputMappings = [];
     }
 
@@ -78,15 +79,15 @@ export class GameScene extends Phaser.Scene {
     setUpPlayers() {
         const player1 = new Paddle(this, 'player1', 50, 300);
         const player2 = new Paddle(this, 'player2', 750, 300);
-        
+
 
         this.players.set(player1.id, player1);
         this.players.set(player2.id, player2);
 
         const Keys = Phaser.Input.Keyboard.KeyCodes;
         this.inputMappings = [
-            { paddle: player1, up: Keys.W, down: Keys.S, right: Keys.D, left: Keys.A,act:Keys.F },
-            { paddle: player2, up: Keys.UP, down: Keys.DOWN, right: Keys.RIGHT, left: Keys.LEFT,act:Keys.SPACE }
+            { paddle: player1, up: Keys.W, down: Keys.S, right: Keys.D, left: Keys.A, act: Keys.F },
+            { paddle: player2, up: Keys.UP, down: Keys.DOWN, right: Keys.RIGHT, left: Keys.LEFT, act: Keys.SPACE }
         ].map(mapping => ({
             paddle: mapping.paddle,
             upKey: this.input.keyboard.addKey(mapping.up),
@@ -98,29 +99,28 @@ export class GameScene extends Phaser.Scene {
         }));
     }
 
-    shoot(paddle){
+    shoot(paddle) {
         const offset = 35;
         const spawnX = paddle.sprite.x + Math.cos(paddle.sprite.rotation) * offset;
         const spawnY = paddle.sprite.y + Math.sin(paddle.sprite.rotation) * offset;
 
         const proyectile = new Ball(this, 'proyectile', spawnX, spawnY);
+        this.balls.add(proyectile);
         proyectile.sprite.setVelocity(
-                    Math.cos(paddle.sprite.rotation) * (paddle.speed + 250),
-                    Math.sin(paddle.sprite.rotation) * (paddle.speed + 250)
+            Math.cos(paddle.sprite.rotation) * (paddle.speed + 250),
+            Math.sin(paddle.sprite.rotation) * (paddle.speed + 250)
         );
 
         this.players.forEach(target => {
-        if (target.id === paddle.id) return;
+            if (target.id === paddle.id) return;
 
-        this.physics.add.collider(proyectile.sprite, target.sprite, () => {
-            this.sound.play('hit');
-            proyectile.sprite.destroy();
+            this.physics.add.collider(proyectile.sprite, target.sprite, () => {
+                this.sound.play('hit');
+                proyectile.sprite.destroy();
+            });
+
+
         });
-
-        if(proyectile.sprite.x > 700 || proyectile.sprite.x < 100 || proyectile.sprite.y > 500 || proyectile.y < 100){
-            proyectile.sprite.destroy();
-        }
-    });
     }
 
     resetBall() {
@@ -194,27 +194,27 @@ export class GameScene extends Phaser.Scene {
                 mapping.coolDown -= delta;
             }
 
-            if (mapping.leftKey.isDown){
+            if (mapping.leftKey.isDown) {
                 paddle.sprite.rotation -= turnSpeed * dt;
             } else if (mapping.rightKey.isDown) {
                 paddle.sprite.rotation += turnSpeed * dt;
             }
-            if (mapping.upKey.isDown){
+            if (mapping.upKey.isDown) {
                 paddle.sprite.setVelocity(
                     Math.cos(paddle.sprite.rotation) * paddle.speed,
                     Math.sin(paddle.sprite.rotation) * paddle.speed
                 );
-                
+
             } else if (mapping.downKey.isDown) {
                 paddle.sprite.setVelocity(
                     -Math.cos(paddle.sprite.rotation) * paddle.speed,
                     -Math.sin(paddle.sprite.rotation) * paddle.speed
                 );
-            } else{
-                paddle.sprite.setVelocity(0,0);
+            } else {
+                paddle.sprite.setVelocity(0, 0);
             }
 
-            if (mapping.actKey.isDown && mapping.coolDown <= 0){
+            if (mapping.actKey.isDown && mapping.coolDown <= 0) {
                 this.shoot(paddle);
                 mapping.coolDown = 1000;
             }
@@ -228,5 +228,13 @@ export class GameScene extends Phaser.Scene {
             this.leftGoals += 1;
             this.goal();
         }
+
+        for (const ball_i of this.balls) {
+            if (ball_i.sprite.x > 800 || ball_i.sprite.x < 0 || ball_i.sprite.y > 600 || ball_i.sprite.y < 0) {
+                ball_i.sprite.destroy();
+            }
+        }
+
+
     }
 }
