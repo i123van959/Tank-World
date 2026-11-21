@@ -10,7 +10,7 @@ export class Paddle {
         this.team=color;
 
         this.sprite = scene.physics.add.sprite(x, y, img);
-        this.sprite.setDisplaySize(166.5,119);
+        this.sprite.setDisplaySize(166.5 , 119 );
         this.sprite.setImmovable(true);
         this.sprite.setCollideWorldBounds(true);
     }

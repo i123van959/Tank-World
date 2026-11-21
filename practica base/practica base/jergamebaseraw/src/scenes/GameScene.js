@@ -65,6 +65,8 @@ export class GameScene extends Phaser.Scene {
         // Setup players
         this.setUpPlayers();
 
+        this.createBlocks();
+
         // Setup collisions
         this.players.forEach(paddle => {
             this.physics.add.collider(this.ball, paddle.sprite, () => {
@@ -83,7 +85,7 @@ export class GameScene extends Phaser.Scene {
         const player1 = new Paddle(this, 'player1', 50, 300,'tanque_R',1);
         const player2 = new Paddle(this, 'player2', 750, 300,'tanque_A',2);
         player2.sprite.rotation=Math.PI;
-        const block1= new Block(this,'bloque 1',10,10,44,44,'bloque S',0x0000ff);
+        
         this.players.set(player1.id, player1);
         this.players.set(player2.id, player2);
 
@@ -100,6 +102,21 @@ export class GameScene extends Phaser.Scene {
             actKey: this.input.keyboard.addKey(mapping.act),
             coolDown: 0
         }));
+    }
+
+    createBlocks(){
+        const block1= new Block(this,'bloque 1',250,0,100,100,'bloque S',0x25d646);
+        const block2= new Block(this,'bloque 2',250,600,100,100,'bloque S',0xff0004);
+        const block3= new Block(this,'bloque 3',250,460,100,100,'bloque S',0xff0004);
+        const block4= new Block(this,'bloque 4',250,370,100,100,'bloque S',0xffe803);
+        const block5= new Block(this,'bloque 5',160,600,100,100,'bloque S',0x75fff8);
+
+        const block6 = new Block(this, 'bloque 6', 550, 0,  100, 100, 'bloque S', 0x0086ff);
+        const block7 = new Block(this, 'bloque 7', 550, 140, 100, 100, 'bloque S', 0x0086ff);
+        const block8 = new Block(this, 'bloque 8', 550, 230, 100, 100, 'bloque S', 0x25d646);
+        const block9 = new Block(this, 'bloque 9', 550, 600, 100, 100, 'bloque S', 0xffe803);
+        const block10 = new Block(this, 'bloque 10', 640, 0, 100, 100, 'bloque S', 0xff75ea);
+        this.blocks = [block1, block2, block3, block4, block5, block6, block7, block8, block9, block10];
     }
 
     shoot(paddle) {
