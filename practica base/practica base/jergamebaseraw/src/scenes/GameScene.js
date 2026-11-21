@@ -74,6 +74,15 @@ export class GameScene extends Phaser.Scene {
             });
         });
 
+        for (var i = 0; i < 10; i++){
+            this.players.forEach(paddle => {
+                    this.physics.add.collider(this.blocks[i].sprite, paddle.sprite, () => {
+                    this.sound.play('hit');
+                });
+            });
+        }
+        
+
         // Pause with ESC and show the pause menu on top
         this.input.keyboard.on('keydown-ESC', () => {
             this.scene.pause();
@@ -116,6 +125,7 @@ export class GameScene extends Phaser.Scene {
         const block8 = new Block(this, 'bloque 8', 550, 230, 100, 100, 'bloque S', 0x25d646);
         const block9 = new Block(this, 'bloque 9', 550, 600, 100, 100, 'bloque S', 0xffe803);
         const block10 = new Block(this, 'bloque 10', 640, 0, 100, 100, 'bloque S', 0xff75ea);
+
         this.blocks = [block1, block2, block3, block4, block5, block6, block7, block8, block9, block10];
     }
 
