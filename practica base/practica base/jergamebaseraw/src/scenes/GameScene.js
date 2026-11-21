@@ -1,6 +1,7 @@
 import Phaser from 'phaser';
 import { Paddle } from '../entities/Paddle';
 import { Ball } from '../entities/Ball';
+import { Block } from '../entities/Block';
 
 export class GameScene extends Phaser.Scene {
     constructor() {
@@ -17,7 +18,8 @@ export class GameScene extends Phaser.Scene {
         // Load assets
         this.load.image('tanque_R', 'assets/images/tanque rojo.png')
         this.load.image('tanque_A', 'assets/images/tanque azul.png')
-
+        this.load.image('bloque S', 'assets/images/bloque blanco mini.png')
+        this.load.image('bloque M', 'assets/images/bloque blanco grande.png')
         // Hit sound
         this.load.audio('hit', 'assets/audio/hit.mp3');
 
@@ -81,7 +83,7 @@ export class GameScene extends Phaser.Scene {
         const player1 = new Paddle(this, 'player1', 50, 300,'tanque_R',1);
         const player2 = new Paddle(this, 'player2', 750, 300,'tanque_A',2);
         player2.sprite.rotation=Math.PI;
-
+        const block1= new Block(this,'bloque 1',10,10,44,44,'bloque S',0x0000ff);
         this.players.set(player1.id, player1);
         this.players.set(player2.id, player2);
 
