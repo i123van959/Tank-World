@@ -24,13 +24,15 @@ export class GameScene extends Phaser.Scene {
         this.load.audio('hit', 'assets/audio/hit.mp3');
 
         // Background music
-        this.load.audio('music', 'assets/audio/music.mp3');
+        this.load.audio('music', 'assets/audio/game.mp3');
+        this.load.audio('music2', 'assets/audio/der.mp3');
     }
 
     create() {
         // Looping background music
         this.music = this.sound.add('music', { loop: true, volume: 0.3 });
         this.music.play();
+        this.music2 = this.sound.add('music2', { loop: true, volume: 0.3 });
 
         // Pause/resume the music with the scene and stop it on exit
         this.events.on('pause', () => this.music.pause());
@@ -50,8 +52,7 @@ export class GameScene extends Phaser.Scene {
         }
 
         // Scores
-        this.scoreLeft = this.add.text(200, 50, '0', { fontSize: '48px' }).setOrigin(0.5);
-        this.scoreRight = this.add.text(600, 50, '0', { fontSize: '48px' }).setOrigin(0.5);
+        
 
         // Collisions on all sides 
         this.physics.world.setBoundsCollision(true, true, true, true);
@@ -66,6 +67,9 @@ export class GameScene extends Phaser.Scene {
         this.setUpPlayers();
 
         this.createBlocks();
+
+        this.scoreLeft = this.add.text(200, 50, '0', { fontSize: '48px' }).setOrigin(0.5);
+        this.scoreRight = this.add.text(600, 50, '0', { fontSize: '48px' }).setOrigin(0.5);
 
         // Setup collisions
         this.players.forEach(paddle => {
@@ -147,6 +151,13 @@ export class GameScene extends Phaser.Scene {
             this.physics.add.collider(proyectile.sprite, target.sprite, () => {
                 this.sound.play('hit');
                 proyectile.sprite.destroy();
+                if (proyectile.team == 1) {
+                    this.rightGoals += 1;
+                    this.goal();
+                } else if (proyectile.team == 2) {
+                    this.leftGoals += 1;
+                    this.goal();
+                }
             });
 
 
@@ -157,6 +168,17 @@ export class GameScene extends Phaser.Scene {
         this.ball.setVelocity(0, 0);
         this.ball.setPosition(400, 300);
         this.time.delayedCall(2000, () => this.launchBall());
+        this.players.forEach( paddle =>{
+            if (paddle.team == 1){
+                paddle.sprite.setPosition(50, 300);
+                paddle.sprite.rotation = Math.PI*2;
+            }
+            else if (paddle.team == 2){
+                paddle.sprite.setPosition(750, 300);
+                paddle.sprite.rotation = Math.PI;
+            }
+        });
+        
     }
 
     launchBall() {
@@ -188,7 +210,7 @@ export class GameScene extends Phaser.Scene {
         this.scoreRight.setText(this.rightGoals.toString());
         this.scoreLeft.setText(this.leftGoals.toString());
 
-        if (this.leftGoals + this.rightGoals >= 3) {
+        if (this.rightGoals >= 3 || this.leftGoals >= 3) {
             const winnerId = this.leftGoals > this.rightGoals ? 'player1' : 'player2';
             this.endGame(winnerId);
         } else {
@@ -202,6 +224,8 @@ export class GameScene extends Phaser.Scene {
         this.ball.setVisible(false);
         this.players.forEach(paddle => { paddle.sprite.setVelocity(0, 0); });
         this.physics.pause();
+        this.music.stop();
+        this.music2.play();
 
         const winnerText = winnerId === 'player1' ? 'Player 1 Wins!' : 'Player 2 Wins!';
         this.add.text(400, 250, winnerText, { fontSize: '48px' }).setOrigin(0.5);
@@ -210,7 +234,10 @@ export class GameScene extends Phaser.Scene {
             .setInteractive({ useHandCursor: true })
             .on('pointerover', () => menuBtn.setStyle({ color: '#ffff00' }))
             .on('pointerout', () => menuBtn.setStyle({ color: '#00ff00' }))
-            .on('pointerdown', () => this.scene.start('MenuScene'));
+            .on('pointerdown', () => {
+                this.music2.stop();
+                this.scene.start('MenuScene');
+            });
     }
 
     update(time, delta) {

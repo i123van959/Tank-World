@@ -5,6 +5,8 @@ export class PauseScene extends Phaser.Scene {
         super('PauseScene');
     }
 
+
+
     create() {
         this.add.rectangle(400, 300, 800, 600, 0x000000, 0.7);
 

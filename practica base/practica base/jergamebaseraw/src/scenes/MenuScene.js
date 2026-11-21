@@ -5,6 +5,14 @@ export class MenuScene extends Phaser.Scene {
         super('MenuScene');
     }
 
+    preload() {
+    // Load assets
+    // Hit sound
+
+    // Background music
+    this.load.audio('music1', 'assets/audio/menu.mp3');
+    }
+
     create() {
         this.add.text(400, 150, 'PONG', {
             fontSize: '64px',
@@ -18,6 +26,12 @@ export class MenuScene extends Phaser.Scene {
             .setInteractive({ useHandCursor: true })
             .on('pointerover', () => localBtn.setStyle({ color: '#ffff00' }))
             .on('pointerout', () => localBtn.setStyle({ color: '#00ff00' }))
-            .on('pointerdown', () => this.scene.start('GameScene'));
+            .on('pointerdown', () => {
+                this.music1.stop();
+                this.scene.start('GameScene');
+            });
+        
+        this.music1 = this.sound.add('music1', { loop: true, volume: 0.3 });
+        this.music1.play();
     }
 }
