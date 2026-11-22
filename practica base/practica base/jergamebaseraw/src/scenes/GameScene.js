@@ -28,7 +28,7 @@ export class GameScene extends Phaser.Scene {
         this.load.image('victoria_A', 'assets/images/victoria2.png')
 
         this.load.image('menu', 'assets/images/menu.png')
-        this.load.image('opciones', 'assets/images/opciones.png')
+
 
         this.load.image('pausa', 'assets/images/pausa.png')
 
@@ -60,11 +60,6 @@ export class GameScene extends Phaser.Scene {
         this.leftGoals = 0;
         this.rightGoals = 0;
 
-        // Add mid line
-        for (let i = 0; i < 12; i++) {
-            this.add.rectangle(400, i * 50 + 25, 10, 30, 0x666666);
-        }
-
         // Scores
 
 
@@ -75,7 +70,7 @@ export class GameScene extends Phaser.Scene {
         this.createBall();
 
         // Launch the ball
-        this.resetBall();
+        //this.resetBall();
 
         // Setup players
         this.setUpPlayers();
@@ -90,11 +85,11 @@ export class GameScene extends Phaser.Scene {
         this.scoreLeft = this.add.text(700, 50, '0', { fontSize: '48px' }).setOrigin(0.5);
 
         // Setup collisions
-        this.players.forEach(paddle => {
+        /*this.players.forEach(paddle => {
             this.physics.add.collider(this.ball, paddle.sprite, () => {
                 this.sound.play('hit');
             });
-        });
+        });*/
 
         for (var i = 0; i < 10; i++) {
             this.players.forEach(paddle => {
@@ -113,8 +108,8 @@ export class GameScene extends Phaser.Scene {
     }
 
     setUpPlayers() {
-        const player1 = new Paddle(this, 'player1', 50, 300, 'tanque_R', 1);
-        const player2 = new Paddle(this, 'player2', 750, 300, 'tanque_A', 2);
+        const player1 = new Paddle(this, 'player1', 50, 400, 'tanque_R', 1);
+        const player2 = new Paddle(this, 'player2', 750, 200, 'tanque_A', 2);
         player2.sprite.rotation = Math.PI;
 
         this.players.set(player1.id, player1);
@@ -183,22 +178,21 @@ export class GameScene extends Phaser.Scene {
     }
 
     resetBall() {
-        this.ball.setVelocity(0, 0);
-        this.ball.setPosition(400, 300);
-        this.time.delayedCall(2000, () => this.launchBall());
+        //this.ball.setVelocity(0, 0);
+        //this.ball.setPosition(400, 300);
+        //this.time.delayedCall(2000, () => this.launchBall());
         this.players.forEach(paddle => {
             if (paddle.team == 1) {
-                paddle.sprite.setPosition(50, 300);
+                paddle.sprite.setPosition(50, 400);
                 paddle.sprite.rotation = Math.PI * 2;
             }
             else if (paddle.team == 2) {
-                paddle.sprite.setPosition(750, 300);
+                paddle.sprite.setPosition(750, 200);
                 paddle.sprite.rotation = Math.PI;
             }
         });
-
     }
-
+    /*
     launchBall() {
         const angle = Phaser.Math.Between(-30, 30);
         const speed = 400;
@@ -209,7 +203,7 @@ export class GameScene extends Phaser.Scene {
         //this.ball.setVelocity(
         //    speedX, speedY
         //);
-    }
+    }*/
 
     createBall() {
         const graphics = this.add.graphics();
@@ -218,9 +212,9 @@ export class GameScene extends Phaser.Scene {
         graphics.generateTexture('ball', 16, 16);
         graphics.destroy();
 
-        this.ball = this.physics.add.image(400, 300, 'ball').setOrigin(0.5);
+        /*this.ball = this.physics.add.image(400, 300, 'ball').setOrigin(0.5);
         this.ball.setCollideWorldBounds(true);
-        this.ball.setBounce(1);
+        this.ball.setBounce(1);*/
 
     }
 
@@ -237,9 +231,9 @@ export class GameScene extends Phaser.Scene {
     }
 
     endGame(winnerId) {
-        this.ball.setVelocity(0, 0);
-        this.ball.setPosition(400, 300);
-        this.ball.setVisible(false);
+        //this.ball.setVelocity(0, 0);
+        //this.ball.setPosition(400, 300);
+        //this.ball.setVisible(false);
         this.players.forEach(paddle => { paddle.sprite.setVelocity(0, 0); });
         this.physics.pause();
         this.music.stop();
@@ -308,13 +302,13 @@ export class GameScene extends Phaser.Scene {
         });
 
         // Game loop
-        if (this.ball.x < 0) {
+        /*if (this.ball.x < 0) {
             this.rightGoals += 1;
             this.goal();
         } else if (this.ball.x > 800) {
             this.leftGoals += 1;
             this.goal();
-        }
+        }*/
 
         for (const ball_i of this.balls) {
             if (ball_i.sprite.x > 800 || ball_i.sprite.x < 0 || ball_i.sprite.y > 600 || ball_i.sprite.y < 0) {

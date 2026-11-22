@@ -13,7 +13,7 @@ export class Ball {
         if(this.team==1){
             this.sprite.setTint(0xff0000);
         }else{
-            this.sprite.setTint(0x0000ff);
+            this.sprite.setTint(0x1883ff);
         }
         
         this.sprite.setDisplaySize(20, 20);
