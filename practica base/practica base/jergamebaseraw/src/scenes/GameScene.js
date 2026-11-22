@@ -24,6 +24,9 @@ export class GameScene extends Phaser.Scene {
         this.load.image('puntos_R','assets/images/contador rojo.png')
         this.load.image('puntos_A','assets/images/contador azul.png')
 
+        this.load.image('victoria_R','assets/images/victoria1.png')
+        this.load.image('victoria_A','assets/images/victoria2.png')
+
         this.load.image('suelo1','assets/images/suelo.png')
         // Hit sound
         this.load.audio('hit', 'assets/audio/hit.mp3');
@@ -237,8 +240,11 @@ export class GameScene extends Phaser.Scene {
         this.music.stop();
         this.music2.play();
 
-        const winnerText = winnerId === 'player1' ? 'Player 1 Wins!' : 'Player 2 Wins!';
-        this.add.text(400, 250, winnerText, { fontSize: '48px' }).setOrigin(0.5);
+        if(winnerId=='player2'){
+            const win=this.add.image(400,300,'victoria_R')
+        }else if(winnerId=='player1'){
+            const win=this.add.image(400,300,'victoria_A')
+        }
 
         const menuBtn = this.add.text(400, 350, 'Menu', { fontSize: '32px', color: '#00ff00' }).setOrigin(0.5)
             .setInteractive({ useHandCursor: true })
