@@ -21,13 +21,16 @@ export class GameScene extends Phaser.Scene {
         this.load.image('bloque S', 'assets/images/bloque blanco mini.png')
         this.load.image('bloque M', 'assets/images/bloque blanco grande.png')
 
-        this.load.image('puntos_R','assets/images/contador rojo.png')
-        this.load.image('puntos_A','assets/images/contador azul.png')
+        this.load.image('puntos_R', 'assets/images/contador rojo.png')
+        this.load.image('puntos_A', 'assets/images/contador azul.png')
 
-        this.load.image('victoria_R','assets/images/victoria1.png')
-        this.load.image('victoria_A','assets/images/victoria2.png')
+        this.load.image('victoria_R', 'assets/images/victoria1.png')
+        this.load.image('victoria_A', 'assets/images/victoria2.png')
 
-        this.load.image('suelo1','assets/images/suelo.png')
+        this.load.image('menu', 'assets/images/menu.png')
+        this.load.image('opciones', 'assets/images/opciones.png')
+
+        this.load.image('suelo1', 'assets/images/suelo.png')
         // Hit sound
         this.load.audio('hit', 'assets/audio/hit.mp3');
 
@@ -41,8 +44,8 @@ export class GameScene extends Phaser.Scene {
         this.music = this.sound.add('music', { loop: true, volume: 0.3 });
         this.music.play();
         this.music2 = this.sound.add('music2', { loop: true, volume: 0.3 });
-        const suelo=this.add.tileSprite(400, 300, 800, 600, 'suelo1')
-        suelo.setTileScale(0.5,0.5);
+        const suelo = this.add.tileSprite(400, 300, 800, 600, 'suelo1')
+        suelo.setTileScale(0.5, 0.5);
         // Pause/resume the music with the scene and stop it on exit
         this.events.on('pause', () => this.music.pause());
         this.events.on('resume', () => this.music.resume());
@@ -61,7 +64,7 @@ export class GameScene extends Phaser.Scene {
         }
 
         // Scores
-        
+
 
         // Collisions on all sides 
         this.physics.world.setBoundsCollision(true, true, true, true);
@@ -76,11 +79,11 @@ export class GameScene extends Phaser.Scene {
         this.setUpPlayers();
 
         this.createBlocks();
-        
-        const scoreCounter1=this.add.image(100,550,'puntos_R')
+
+        const scoreCounter1 = this.add.image(100, 550, 'puntos_R')
         scoreCounter1.setAlpha(0.7);
         this.scoreRight = this.add.text(100, 550, '0', { fontSize: '48px' }).setOrigin(0.5);
-        const scoreCounter2=this.add.image(700,50,'puntos_A')
+        const scoreCounter2 = this.add.image(700, 50, 'puntos_A')
         scoreCounter2.setAlpha(0.7);
         this.scoreLeft = this.add.text(700, 50, '0', { fontSize: '48px' }).setOrigin(0.5);
 
@@ -91,14 +94,14 @@ export class GameScene extends Phaser.Scene {
             });
         });
 
-        for (var i = 0; i < 10; i++){
+        for (var i = 0; i < 10; i++) {
             this.players.forEach(paddle => {
-                    this.physics.add.collider(this.blocks[i].sprite, paddle.sprite, () => {
+                this.physics.add.collider(this.blocks[i].sprite, paddle.sprite, () => {
                     this.sound.play('hit');
                 });
             });
         }
-        
+
 
         // Pause with ESC and show the pause menu on top
         this.input.keyboard.on('keydown-ESC', () => {
@@ -108,10 +111,10 @@ export class GameScene extends Phaser.Scene {
     }
 
     setUpPlayers() {
-        const player1 = new Paddle(this, 'player1', 50, 300,'tanque_R',1);
-        const player2 = new Paddle(this, 'player2', 750, 300,'tanque_A',2);
-        player2.sprite.rotation=Math.PI;
-        
+        const player1 = new Paddle(this, 'player1', 50, 300, 'tanque_R', 1);
+        const player2 = new Paddle(this, 'player2', 750, 300, 'tanque_A', 2);
+        player2.sprite.rotation = Math.PI;
+
         this.players.set(player1.id, player1);
         this.players.set(player2.id, player2);
 
@@ -130,14 +133,14 @@ export class GameScene extends Phaser.Scene {
         }));
     }
 
-    createBlocks(){
-        const block1= new Block(this,'bloque 1',250,0,100,100,'bloque S',0x25d646);
-        const block2= new Block(this,'bloque 2',250,600,100,100,'bloque S',0xff0004);
-        const block3= new Block(this,'bloque 3',250,460,100,100,'bloque S',0x75fff8);
-        const block4= new Block(this,'bloque 4',250,370,100,100,'bloque S',0xffe803);
-        const block5= new Block(this,'bloque 5',160,600,100,100,'bloque S',0x75fff8);
+    createBlocks() {
+        const block1 = new Block(this, 'bloque 1', 250, 0, 100, 100, 'bloque S', 0x25d646);
+        const block2 = new Block(this, 'bloque 2', 250, 600, 100, 100, 'bloque S', 0xff0004);
+        const block3 = new Block(this, 'bloque 3', 250, 460, 100, 100, 'bloque S', 0x75fff8);
+        const block4 = new Block(this, 'bloque 4', 250, 370, 100, 100, 'bloque S', 0xffe803);
+        const block5 = new Block(this, 'bloque 5', 160, 600, 100, 100, 'bloque S', 0x75fff8);
 
-        const block6 = new Block(this, 'bloque 6', 550, 0,  100, 100, 'bloque S', 0x0086ff);
+        const block6 = new Block(this, 'bloque 6', 550, 0, 100, 100, 'bloque S', 0x0086ff);
         const block7 = new Block(this, 'bloque 7', 550, 140, 100, 100, 'bloque S', 0xff75ea);
         const block8 = new Block(this, 'bloque 8', 550, 230, 100, 100, 'bloque S', 0x25d646);
         const block9 = new Block(this, 'bloque 9', 550, 600, 100, 100, 'bloque S', 0xffe803);
@@ -151,7 +154,7 @@ export class GameScene extends Phaser.Scene {
         const spawnX = paddle.sprite.x + Math.cos(paddle.sprite.rotation) * offset;
         const spawnY = paddle.sprite.y + Math.sin(paddle.sprite.rotation) * offset;
 
-        const proyectile = new Ball(this, 'proyectile', spawnX, spawnY,paddle.team);
+        const proyectile = new Ball(this, 'proyectile', spawnX, spawnY, paddle.team);
         this.balls.add(proyectile);
         proyectile.sprite.setVelocity(
             Math.cos(paddle.sprite.rotation) * (paddle.speed + 250),
@@ -181,17 +184,17 @@ export class GameScene extends Phaser.Scene {
         this.ball.setVelocity(0, 0);
         this.ball.setPosition(400, 300);
         this.time.delayedCall(2000, () => this.launchBall());
-        this.players.forEach( paddle =>{
-            if (paddle.team == 1){
+        this.players.forEach(paddle => {
+            if (paddle.team == 1) {
                 paddle.sprite.setPosition(50, 300);
-                paddle.sprite.rotation = Math.PI*2;
+                paddle.sprite.rotation = Math.PI * 2;
             }
-            else if (paddle.team == 2){
+            else if (paddle.team == 2) {
                 paddle.sprite.setPosition(750, 300);
                 paddle.sprite.rotation = Math.PI;
             }
         });
-        
+
     }
 
     launchBall() {
@@ -240,20 +243,29 @@ export class GameScene extends Phaser.Scene {
         this.music.stop();
         this.music2.play();
 
-        if(winnerId=='player2'){
-            const win=this.add.image(400,300,'victoria_R')
-        }else if(winnerId=='player1'){
-            const win=this.add.image(400,300,'victoria_A')
+        if (winnerId == 'player2') {
+            const win = this.add.image(400, 300, 'victoria_R')
+            const menuBtn = this.add.image(650, 500, 'menu').setOrigin(0.5)
+                .setInteractive({ useHandCursor: true })
+                .on('pointerover', () => menuBtn.setAlpha(0.9))
+                .on('pointerout', () => menuBtn.setAlpha(1))
+                .on('pointerdown', () => {
+                    this.music2.stop();
+                    this.scene.start('MenuScene');
+                });
+            menuBtn.setDisplaySize(148, 48.67);
+        } else if (winnerId == 'player1') {
+            const win = this.add.image(400, 300, 'victoria_A')
+            const menuBtn = this.add.image(150, 500, 'menu').setOrigin(0.5)
+                .setInteractive({ useHandCursor: true })
+                .on('pointerover', () => menuBtn.setAlpha(0.9))
+                .on('pointerout', () => menuBtn.setAlpha(1))
+                .on('pointerdown', () => {
+                    this.music2.stop();
+                    this.scene.start('MenuScene');
+                });
+            menuBtn.setDisplaySize(148, 48.67);
         }
-
-        const menuBtn = this.add.text(400, 350, 'Menu', { fontSize: '32px', color: '#00ff00' }).setOrigin(0.5)
-            .setInteractive({ useHandCursor: true })
-            .on('pointerover', () => menuBtn.setStyle({ color: '#ffff00' }))
-            .on('pointerout', () => menuBtn.setStyle({ color: '#00ff00' }))
-            .on('pointerdown', () => {
-                this.music2.stop();
-                this.scene.start('MenuScene');
-            });
     }
 
     update(time, delta) {
