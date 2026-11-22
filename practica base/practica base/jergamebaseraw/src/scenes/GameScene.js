@@ -91,13 +91,24 @@ export class GameScene extends Phaser.Scene {
             });
         });*/
 
-        for (var i = 0; i < 10; i++) {
+        /*for (var i = 0; i < 10; i++) {
             this.players.forEach(paddle => {
                 this.physics.add.collider(this.blocks[i].sprite, paddle.sprite, () => {
                     this.sound.play('hit');
                 });
             });
-        }
+        }*/
+
+        this.blocks.forEach(block => {
+            this.players.forEach(paddle => {
+                this.physics.add.collider(
+                    block.sprite,
+                    paddle.sprite,
+                    () => {
+                    }
+                );
+            });
+        });
 
 
         // Pause with ESC and show the pause menu on top
@@ -175,6 +186,12 @@ export class GameScene extends Phaser.Scene {
 
 
         });
+
+        this.blocks.forEach(block => {
+            this.physics.add.collider(proyectile.sprite, block.sprite, () => {
+                proyectile.sprite.destroy();
+            });   
+        });
     }
 
     resetBall() {
@@ -191,6 +208,7 @@ export class GameScene extends Phaser.Scene {
                 paddle.sprite.rotation = Math.PI;
             }
         });
+
     }
     /*
     launchBall() {

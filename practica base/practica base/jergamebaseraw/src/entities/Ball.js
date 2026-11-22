@@ -17,7 +17,7 @@ export class Ball {
         }
         
         this.sprite.setDisplaySize(20, 20);
-        this.sprite.setImmovable(true);
+        this.sprite.setImmovable(false);
         //this.sprite.setCollideWorldBounds(true);
     }
 }
