@@ -30,6 +30,8 @@ export class GameScene extends Phaser.Scene {
         this.load.image('menu', 'assets/images/menu.png')
         this.load.image('opciones', 'assets/images/opciones.png')
 
+        this.load.image('pausa', 'assets/images/pausa.png')
+
         this.load.image('suelo1', 'assets/images/suelo.png')
         // Hit sound
         this.load.audio('hit', 'assets/audio/hit.mp3');
