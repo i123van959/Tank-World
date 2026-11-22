@@ -20,6 +20,11 @@ export class GameScene extends Phaser.Scene {
         this.load.image('tanque_A', 'assets/images/tanque azul.png')
         this.load.image('bloque S', 'assets/images/bloque blanco mini.png')
         this.load.image('bloque M', 'assets/images/bloque blanco grande.png')
+
+        this.load.image('puntos_R','assets/images/contador rojo.png')
+        this.load.image('puntos_A','assets/images/contador azul.png')
+
+        this.load.image('suelo1','assets/images/suelo.png')
         // Hit sound
         this.load.audio('hit', 'assets/audio/hit.mp3');
 
@@ -33,7 +38,8 @@ export class GameScene extends Phaser.Scene {
         this.music = this.sound.add('music', { loop: true, volume: 0.3 });
         this.music.play();
         this.music2 = this.sound.add('music2', { loop: true, volume: 0.3 });
-
+        const suelo=this.add.tileSprite(400, 300, 800, 600, 'suelo1')
+        suelo.setTileScale(0.5,0.5);
         // Pause/resume the music with the scene and stop it on exit
         this.events.on('pause', () => this.music.pause());
         this.events.on('resume', () => this.music.resume());
@@ -67,9 +73,13 @@ export class GameScene extends Phaser.Scene {
         this.setUpPlayers();
 
         this.createBlocks();
-
-        this.scoreLeft = this.add.text(200, 50, '0', { fontSize: '48px' }).setOrigin(0.5);
-        this.scoreRight = this.add.text(600, 50, '0', { fontSize: '48px' }).setOrigin(0.5);
+        
+        const scoreCounter1=this.add.image(100,550,'puntos_R')
+        scoreCounter1.setAlpha(0.7);
+        this.scoreRight = this.add.text(100, 550, '0', { fontSize: '48px' }).setOrigin(0.5);
+        const scoreCounter2=this.add.image(700,50,'puntos_A')
+        scoreCounter2.setAlpha(0.7);
+        this.scoreLeft = this.add.text(700, 50, '0', { fontSize: '48px' }).setOrigin(0.5);
 
         // Setup collisions
         this.players.forEach(paddle => {
