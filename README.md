@@ -269,6 +269,9 @@ Los bocetos de los personajes se encuentran en el apartado [4.2](#42-personajes)
 
 *Figura 11. Pantalla de juego.*
 
+![Pantalla de fin de la partida](img/menu_pausa.png)
+
+*Figura 12. Pantalla de pausa.*
 
 ### 7.2. Diagrama de flujo
 
