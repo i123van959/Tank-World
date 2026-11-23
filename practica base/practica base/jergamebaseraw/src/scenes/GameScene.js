@@ -144,7 +144,7 @@ export class GameScene extends Phaser.Scene {
         const Keys = Phaser.Input.Keyboard.KeyCodes;
         this.inputMappings = [
             { paddle: player1, up: Keys.W, down: Keys.S, right: Keys.D, left: Keys.A, act: Keys.F },
-            { paddle: player2, up: Keys.UP, down: Keys.DOWN, right: Keys.RIGHT, left: Keys.LEFT, act: Keys.SPACE }
+            { paddle: player2, up: Keys.UP, down: Keys.DOWN, right: Keys.RIGHT, left: Keys.LEFT, act: Keys.MINUS }
         ].map(mapping => ({
             paddle: mapping.paddle,
             upKey: this.input.keyboard.addKey(mapping.up),

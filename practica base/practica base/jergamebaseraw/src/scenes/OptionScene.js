@@ -21,11 +21,19 @@ export class OptionScene extends Phaser.Scene {
             .on('pointerover', () => resumeBtn.setAlpha(0.5))
             .on('pointerout', () => resumeBtn.setAlpha(1))
             .on('pointerdown', () => {
-                this.scene.stop();
-                this.scene.resume('MenuScene');
+                this.sound.volume = Math.min(1, Math.round((this.sound.volume + 0.1) * 10) / 10);
             });
 
-        const menuBtn = this.add.image(400, 420,'menu').setOrigin(0.5)
+        const menosVolBtn = this.add.image(400, 420,'continuar').setOrigin(0.5)
+            .setInteractive({ useHandCursor: true })
+            .on('pointerover', () => resumeBtn.setAlpha(0.5))
+            .on('pointerout', () => resumeBtn.setAlpha(1))
+            .on('pointerdown', () => {
+                this.sound.volume = Math.min(1, Math.round((this.sound.volume - 0.1) * 10) / 10);
+            });
+
+
+        const menuBtn = this.add.image(400, 520,'menu').setOrigin(0.5)
             .setInteractive({ useHandCursor: true })
             .on('pointerover', () => menuBtn.setAlpha(0.5))
             .on('pointerout', () => menuBtn.setAlpha(1))
