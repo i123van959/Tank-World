@@ -112,7 +112,6 @@ El objetivo de cada jugador es destruir el tanque enemigo y evitar que el rival 
 
 | Objeto | Efecto | Duración | Aparición |
 | :--- | :--- | :---: | :--- |
-| Disparo explosivo | Disminuye el alcance del disparo, pero inflige daño en una pequeña área | 15 s | Aleatoria con tiempo indeterminado |
 | Barrera | Mientras este activa el tanque no puede recibir daño | 10 s | Aleatoria con tiempo indeterminado |
 | Disparo triple | Dispara tres balas, una hacia delante y dos ligeramente giradas hacia cada lado | 15 s | Aleatoria con tiempo indeterminado |
 | Rebote | Las balas disparadas tienen la capacidad de rebotar una vez en las paredes | 15 s | Aleatoria con tiempo indeterminado |
@@ -244,7 +243,7 @@ Los bocetos de los personajes se encuentran en el apartado [4.2](#42-personajes)
 ## 7. Interfaz y diagrama de flujo
 
 ### 7.1. Pantallas
-
+#### 7.1.1 Bocetos
 **Menú principal**
 
 ![Boceto del menú principal](img/boceto_menu_principal.png)
@@ -256,6 +255,14 @@ Los bocetos de los personajes se encuentran en el apartado [4.2](#42-personajes)
 ![Boceto de la pantalla de juego](img/boceto_pantalla_juego.png)
 
 *Figura 8. Pantalla de juego.*
+
+#### 7.1.2 Pantallas implementadas
+![Pantalla de fin de la partida](img/boceto_fin_partida.png)
+
+*Figura 9. Pantalla de fin de la partida.*
+![Pantalla de ajustes](img/boceto_fin_partida.png)
+
+*Figura 10. Pantalla de ajustes.*
 
 ### 7.2. Diagrama de flujo
 
