@@ -110,12 +110,12 @@ El objetivo de cada jugador es destruir el tanque enemigo y evitar que el rival 
 
 #### 3.3.2. Objetos y power-ups
 
-| Objeto | Efecto | Duración | Aparición |
-| :--- | :--- | :---: | :--- |
-| Barrera | Mientras este activa el tanque no puede recibir daño | 10 s | Aleatoria con tiempo indeterminado |
-| Disparo triple | Dispara tres balas, una hacia delante y dos ligeramente giradas hacia cada lado | 15 s | Aleatoria con tiempo indeterminado |
-| Rebote | Las balas disparadas tienen la capacidad de rebotar una vez en las paredes | 15 s | Aleatoria con tiempo indeterminado |
-| Más cadencia | Aumenta la cadencia de disparo pero disminuye el daño | 15 s | Aleatoria con tiempo indeterminado |
+| Objeto | Efecto | Duración | Aparición | Icono |
+| :--- | :--- | :---: | :--- | :--- |
+| Barrera | Mientras este activa el tanque no puede recibir daño | 10 s | Aleatoria con tiempo indeterminado | |
+| Disparo triple | Dispara tres balas, una hacia delante y dos ligeramente giradas hacia cada lado | 15 s | Aleatoria con tiempo indeterminado | |
+| Rebote | Las balas disparadas tienen la capacidad de rebotar una vez en las paredes | 15 s | Aleatoria con tiempo indeterminado | |
+| Más cadencia | Aumenta la cadencia de disparo pero disminuye el daño | 15 s | Aleatoria con tiempo indeterminado | |
 
 #### 3.3.3. Sistema de puntuación
 
