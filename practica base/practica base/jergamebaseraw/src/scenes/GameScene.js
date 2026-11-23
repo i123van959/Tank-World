@@ -130,7 +130,7 @@ export class GameScene extends Phaser.Scene {
         const Keys = Phaser.Input.Keyboard.KeyCodes;
         this.inputMappings = [
             { paddle: player1, up: Keys.W, down: Keys.S, right: Keys.D, left: Keys.A, act: Keys.F },
-            { paddle: player2, up: Keys.UP, down: Keys.DOWN, right: Keys.RIGHT, left: Keys.LEFT, act: Keys.NUMPAD_ZERO }
+            { paddle: player2, up: Keys.UP, down: Keys.DOWN, right: Keys.RIGHT, left: Keys.LEFT, act: Keys.SPACE }
         ].map(mapping => ({
             paddle: mapping.paddle,
             upKey: this.input.keyboard.addKey(mapping.up),
@@ -216,7 +216,7 @@ export class GameScene extends Phaser.Scene {
                 if (projectile.team == 1 && paddle.team == 1) {
                     this.rightGoals += 1;
                     this.goal();
-                } else if (projectile.team == 2 && paddle.team == 0) {
+                } else if (projectile.team == 2 && paddle.team == 2) {
                     this.leftGoals += 1;
                     this.goal();
                 }
