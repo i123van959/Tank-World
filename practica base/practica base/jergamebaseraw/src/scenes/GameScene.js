@@ -2,6 +2,7 @@ import Phaser from 'phaser';
 import { Paddle } from '../entities/Paddle';
 import { Ball } from '../entities/Ball';
 import { Block } from '../entities/Block';
+import { Powerup } from '../entities/Powerup';
 
 export class GameScene extends Phaser.Scene {
     constructor() {
@@ -21,6 +22,11 @@ export class GameScene extends Phaser.Scene {
         this.load.image('tanque_A', 'assets/images/tanque azul.png')
         this.load.image('bloque S', 'assets/images/bloque blanco mini.png')
         this.load.image('bloque M', 'assets/images/bloque blanco grande.png')
+
+        this.load.image('poder_C', 'assets/images/poder cadencia.png')
+        this.load.image('poder_E', 'assets/images/poder escudo.png')
+        this.load.image('poder_R', 'assets/images/poder rebote.png')
+        this.load.image('poder_T', 'assets/images/poder triple.png')
 
         this.load.image('puntos_R', 'assets/images/contador rojo.png')
         this.load.image('puntos_A', 'assets/images/contador azul.png')
@@ -77,6 +83,8 @@ export class GameScene extends Phaser.Scene {
         this.setUpPlayers();
 
         this.createBlocks();
+
+        this.createPowerup();
 
         const scoreCounter1 = this.add.image(100, 550, 'puntos_R')
         scoreCounter1.setAlpha(0.7);
@@ -158,6 +166,25 @@ export class GameScene extends Phaser.Scene {
         this.blocks = [block1, block2, block3, block4, block5, block6, block7, block8, block9, block10];
     }
 
+    createPowerup() {
+        const tipo = Phaser.Math.Between(1, 4);
+        const texturas = {
+            1: 'poder_E', // Escudo
+            2: 'poder_R', // Rebote
+            3: 'poder_T', // Triple
+            4: 'poder_C'  // Cadencia
+        }; 
+
+        const powerup = new Powerup(this, 'powerup 1', 400, 300, 59, 59, texturas[tipo], tipo);
+
+        this.players.forEach(paddle => {
+            this.physics.add.collider(paddle.sprite, powerup.sprite, () => {
+                paddle.power = powerup.power;
+                powerup.sprite.destroy();
+            });
+        });
+    }
+
     shoot(paddle) {
         const offset = 35;
         const spawnX = paddle.sprite.x + Math.cos(paddle.sprite.rotation) * offset;
@@ -174,7 +201,7 @@ export class GameScene extends Phaser.Scene {
             this.projectileCollision(projectile, paddle, angle);
         }
 
-        if (paddle.power == 3) {
+        if (paddle.power == 2) {
             createProjectile('projectile1', paddle.sprite.rotation);
             createProjectile('projectile2', paddle.sprite.rotation + Math.PI/8);
             createProjectile('projectile3', paddle.sprite.rotation - Math.PI/8);
@@ -208,7 +235,7 @@ export class GameScene extends Phaser.Scene {
                 projectile.sprite.destroy();
                 this.balls.delete(projectile);
 
-                if (target.power == 2) return;
+                if (target.power == 1) return;
                 
                 if (this.scoredShoots.has(projectile.shootId)) return;
                 this.scoredShoots.add(projectile.shootId); 
@@ -227,7 +254,7 @@ export class GameScene extends Phaser.Scene {
 
         this.blocks.forEach(block => {
             this.physics.add.collider(projectile.sprite, block.sprite, () => {
-                if (paddle.power == 4 && projectile.rebote <2){
+                if (paddle.power == 3 && projectile.rebote <2){
                     projectile.sprite.setBounce(0.3);
                     projectile.rebote++;
                 } else{
@@ -333,10 +360,10 @@ export class GameScene extends Phaser.Scene {
         this.inputMappings.forEach(mapping => {
             const paddle = mapping.paddle;
 
-            if (mapping.coolDown > 0 && paddle.power != 5) {
+            if (mapping.coolDown > 0 && paddle.power != 4) {
                 mapping.coolDown -= delta;
             }
-            else if (mapping.coolDown > 0 && paddle.power == 5) {
+            else if (mapping.coolDown > 0 && paddle.power == 4) {
                 mapping.coolDown -= delta * 1.5;
             }
 
