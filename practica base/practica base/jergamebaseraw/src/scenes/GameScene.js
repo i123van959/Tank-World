@@ -11,6 +11,7 @@ export class GameScene extends Phaser.Scene {
     init() {
         this.players = new Map();
         this.balls = new Set();
+        this.scoredShoots = new Set();
         this.inputMappings = [];
     }
 
@@ -161,32 +162,52 @@ export class GameScene extends Phaser.Scene {
         const offset = 35;
         const spawnX = paddle.sprite.x + Math.cos(paddle.sprite.rotation) * offset;
         const spawnY = paddle.sprite.y + Math.sin(paddle.sprite.rotation) * offset;
+        const shootId = `${paddle.id}-${Date.now()}-${Math.random()}`;
 
-        const proyectile = new Ball(this, 'proyectile', spawnX, spawnY, paddle.team);
-        if (paddle.power = 3) {
-            const proyectile1 = new Ball(this, 'proyectile1', spawnX, spawnY, paddle.team);
-            const proyectile2 = new Ball(this, 'proyectile2', spawnX, spawnY, paddle.team);
+        const createProjectile = (key, angle) => {
+            const projectile = new Ball(this, key, spawnX, spawnY, paddle.team);
+            projectile.shootId = shootId;
+            projectile.hitProcessed = false;
+            this.balls.add(projectile);
+            this.projectileCollision(projectile, paddle, angle);
         }
-        this.balls.add(proyectile);
-        proyectile.sprite.setVelocity(
-            Math.cos(paddle.sprite.rotation) * (paddle.speed + 250),
-            Math.sin(paddle.sprite.rotation) * (paddle.speed + 250)
-        );
+
+        if (paddle.power == 3) {
+            createProjectile('projectile1', paddle.sprite.rotation);
+            createProjectile('projectile2', paddle.sprite.rotation + Math.PI/8);
+            createProjectile('projectile3', paddle.sprite.rotation - Math.PI/8);
+        }
+        else{
+            createProjectile('projectile', paddle.sprite.rotation);
+        } 
+    }
+
+    projectileCollision(projectile, paddle, rotation){
+        projectile.sprite.setVelocity(
+                Math.cos(rotation) * (paddle.speed + 250),
+                Math.sin(rotation) * (paddle.speed + 250)
+            );
 
         this.players.forEach(target => {
             if (target.id === paddle.id)  return;
 
-            this.physics.add.collider(proyectile.sprite, target.sprite, () => {
-                if (target.power == 2) {
-                    proyectile.sprite.destroy();
-                    return;
-                }
+            this.physics.add.collider(projectile.sprite, target.sprite, () => {
+                if (!projectile.sprite.active || projectile.hitProcessed) return;
+                this.hitProcessed = true;
+
                 this.sound.play('hit');
-                proyectile.sprite.destroy();
-                if (proyectile.team == 1) {
+                projectile.sprite.destroy();
+                this.balls.delete(projectile);
+
+                if (target.power == 2) return;
+                
+                if (this.scoredShoots.has(projectile.shootId)) return;
+                this.scoredShoots.add(projectile.shootId); 
+
+                if (projectile.team == 1) {
                     this.rightGoals += 1;
                     this.goal();
-                } else if (proyectile.team == 2) {
+                } else if (projectile.team == 2) {
                     this.leftGoals += 1;
                     this.goal();
                 }
@@ -196,8 +217,8 @@ export class GameScene extends Phaser.Scene {
         });
 
         this.blocks.forEach(block => {
-            this.physics.add.collider(proyectile.sprite, block.sprite, () => {
-                proyectile.sprite.destroy();
+            this.physics.add.collider(projectile.sprite, block.sprite, () => {
+                projectile.sprite.destroy();
             });   
         });
     }
@@ -206,6 +227,7 @@ export class GameScene extends Phaser.Scene {
         //this.ball.setVelocity(0, 0);
         //this.ball.setPosition(400, 300);
         //this.time.delayedCall(2000, () => this.launchBall());
+
         this.players.forEach(paddle => {
             if (paddle.team == 1) {
                 paddle.sprite.setPosition(50, 400);
