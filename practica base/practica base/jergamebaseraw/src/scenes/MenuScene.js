@@ -66,8 +66,9 @@ export class MenuScene extends Phaser.Scene {
             .on('pointerover', () => closeBtn.setAlpha(0.9))
             .on('pointerout', () => closeBtn.setAlpha(1))
             .on('pointerdown', () => {
-                this.music1.stop();
-                this.scene.start('GameScene');
+                this.sound.stopAll();
+                this.game.destroy(true); // Apaga el motor y limpia el canvas
+                window.close();
             });
         this.music1 = this.sound.add('music1', { loop: true, volume: 0.3 });
         this.music1.play();

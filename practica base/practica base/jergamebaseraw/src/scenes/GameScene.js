@@ -93,6 +93,12 @@ export class GameScene extends Phaser.Scene {
         scoreCounter2.setAlpha(0.7);
         this.scoreLeft = this.add.text(700, 50, '0', { fontSize: '48px' }).setOrigin(0.5);
 
+        const powerIcon1 = this.add.image(45, 550, 'poder_E').setDisplaySize(53, 53).setVisible(false);
+        this.players.get('player1').powerIcon = powerIcon1;
+
+        const powerIcon2 = this.add.image(755, 50, 'poder_E').setDisplaySize(53, 53).setVisible(false);
+        this.players.get('player2').powerIcon = powerIcon2;
+
         // Setup collisions
         /*this.players.forEach(paddle => {
             this.physics.add.collider(this.ball, paddle.sprite, () => {
@@ -167,20 +173,28 @@ export class GameScene extends Phaser.Scene {
     }
 
     createPowerup() {
-        const tipo = Phaser.Math.Between(1, 4);
-        const texturas = {
-            1: 'poder_E', // Escudo
-            2: 'poder_R', // Rebote
-            3: 'poder_T', // Triple
-            4: 'poder_C'  // Cadencia
+        const a = Phaser.Math.Between(1, 4);
+        const tipos = {
+            1: { imagen: 'poder_E', tiempo: 2500}, 
+            2: { imagen: 'poder_T', tiempo: 3000}, 
+            3: { imagen: 'poder_R', tiempo: 3000},
+            4: { imagen: 'poder_C', tiempo: 3000}
         }; 
 
-        const powerup = new Powerup(this, 'powerup 1', 400, 300, 59, 59, texturas[tipo], tipo);
+        const powerup = new Powerup(this, 'powerup 1', 400, 300, 59, 59, tipos[a].imagen, a);
 
         this.players.forEach(paddle => {
             this.physics.add.collider(paddle.sprite, powerup.sprite, () => {
                 paddle.power = powerup.power;
                 powerup.sprite.destroy();
+                paddle.power = a;
+                paddle.powerTime = tipos[a].tiempo;
+                paddle.powerIcon.setTexture(tipos[a].imagen).setVisible(true);
+                powerup.sprite.destroy();
+
+                this.time.delayedCall(Phaser.Math.Between(3000, 5000), () => {
+                    this.createPowerup();
+                })
             });
         });
     }
@@ -270,6 +284,11 @@ export class GameScene extends Phaser.Scene {
         //this.time.delayedCall(2000, () => this.launchBall());
 
         this.players.forEach(paddle => {
+            paddle.power = 0;
+            paddle.powerTimer = 0;
+            if (paddle.powerIcon) {
+                paddle.powerIcon.setVisible(false);
+            }
             if (paddle.team == 1) {
                 paddle.sprite.setPosition(50, 400);
                 paddle.sprite.rotation = Math.PI * 2;
@@ -390,6 +409,15 @@ export class GameScene extends Phaser.Scene {
             if (mapping.actKey.isDown && mapping.coolDown <= 0) {
                 this.shoot(paddle);
                 mapping.coolDown = 1000;
+            }
+
+            if (paddle.power > 0){
+                paddle.powerTime -= delta;
+                if (paddle.powerTime <= 0){
+                    paddle.power = 0;
+                    paddle.powerTime = 0;
+                    paddle.powerIcon.setVisible(false);
+                }
             }
         });
 
