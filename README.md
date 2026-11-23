@@ -110,12 +110,12 @@ El objetivo de cada jugador es destruir el tanque enemigo y evitar que el rival 
 
 #### 3.3.2. Objetos y power-ups
 
-| Objeto | Efecto | Duración | Aparición |
-| :--- | :--- | :---: | :--- |
-| Barrera | Mientras este activa el tanque no puede recibir daño | 10 s | Aleatoria con tiempo indeterminado |
-| Disparo triple | Dispara tres balas, una hacia delante y dos ligeramente giradas hacia cada lado | 15 s | Aleatoria con tiempo indeterminado |
-| Rebote | Las balas disparadas tienen la capacidad de rebotar una vez en las paredes | 15 s | Aleatoria con tiempo indeterminado |
-| Más cadencia | Aumenta la cadencia de disparo pero disminuye el daño | 15 s | Aleatoria con tiempo indeterminado |
+| Objeto | Efecto | Duración | Aparición | Icono |
+| :--- | :--- | :---: | :--- | :--- |
+| Barrera | Mientras este activa el tanque no puede recibir daño | 2.5 s | Aleatoria con tiempo indeterminado |![icono escudo](img/poder_escudo.png) |
+| Disparo triple | Dispara tres balas, una hacia delante y dos ligeramente giradas hacia cada lado | 3 s | Aleatoria con tiempo indeterminado |![icono triple](img/poder_triple.png) |
+| Rebote | Las balas disparadas tienen la capacidad de rebotar una vez en las paredes | 3 s | Aleatoria con tiempo indeterminado |![icono icono](img/poder_rebote.png) |
+| Más cadencia | Aumenta la cadencia de disparo pero disminuye el daño | 3 s | Aleatoria con tiempo indeterminado |![icono cadencia](img/poder_cadencia.png) |
 
 #### 3.3.3. Sistema de puntuación
 
@@ -257,12 +257,18 @@ Los bocetos de los personajes se encuentran en el apartado [4.2](#42-personajes)
 *Figura 8. Pantalla de juego.*
 
 #### 7.1.2 Pantallas implementadas
-![Pantalla de fin de la partida](img/boceto_fin_partida.png)
+![Pantalla de fin de la partida](img/victoria1.png) ![Pantalla de fin de la partida](img/victoria2.png)
 
-*Figura 9. Pantalla de fin de la partida.*
-![Pantalla de ajustes](img/boceto_fin_partida.png)
+*Figura 9. Pantallas de fin de la partida.*
+
+![Pantalla de ajustes](img/boceto_ajustes.png)
 
 *Figura 10. Pantalla de ajustes.*
+
+![Pantalla de juego](img/Pantalla_de_juego.png)
+
+*Figura 11. Pantalla de juego.*
+
 
 ### 7.2. Diagrama de flujo
 
