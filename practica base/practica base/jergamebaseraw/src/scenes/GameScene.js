@@ -163,6 +163,10 @@ export class GameScene extends Phaser.Scene {
         const spawnY = paddle.sprite.y + Math.sin(paddle.sprite.rotation) * offset;
 
         const proyectile = new Ball(this, 'proyectile', spawnX, spawnY, paddle.team);
+        if (paddle.power = 3) {
+            const proyectile1 = new Ball(this, 'proyectile1', spawnX, spawnY, paddle.team);
+            const proyectile2 = new Ball(this, 'proyectile2', spawnX, spawnY, paddle.team);
+        }
         this.balls.add(proyectile);
         proyectile.sprite.setVelocity(
             Math.cos(paddle.sprite.rotation) * (paddle.speed + 250),
