@@ -6,6 +6,7 @@ export class PauseScene extends Phaser.Scene {
     }
 
     preload(){
+        this.load.image('pausa', 'assets/images/pausa.png')
         this.load.image('menu', 'assets/images/menu.png')
         this.load.image('opciones', 'assets/images/opciones.png')
         this.load.image('continuar', 'assets/images/continuar.png')

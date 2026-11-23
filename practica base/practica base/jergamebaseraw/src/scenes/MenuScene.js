@@ -49,7 +49,8 @@ export class MenuScene extends Phaser.Scene {
             .on('pointerout', () => optionsBtn.setAlpha(1))
             .on('pointerdown', () => {
                 this.music1.stop();
-                this.scene.start('GameScene');
+                this.scene.pause;
+                this.scene.launch('OptionScene');
             });
         const creditsBtn = this.add.image(550, 420, 'creditos').setOrigin(0.5)
             .setInteractive({ useHandCursor: true })
@@ -57,7 +58,8 @@ export class MenuScene extends Phaser.Scene {
             .on('pointerout', () => creditsBtn.setAlpha(1))
             .on('pointerdown', () => {
                 this.music1.stop();
-                this.scene.start('GameScene');
+                this.scene.pause;
+                this.scene.launch('CreditsScene');
             });
         const closeBtn = this.add.image(400, 520, 'salir').setOrigin(0.5)
             .setInteractive({ useHandCursor: true })
