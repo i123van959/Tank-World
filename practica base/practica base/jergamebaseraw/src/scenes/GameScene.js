@@ -289,8 +289,11 @@ export class GameScene extends Phaser.Scene {
         this.inputMappings.forEach(mapping => {
             const paddle = mapping.paddle;
 
-            if (mapping.coolDown > 0) {
+            if (mapping.coolDown > 0 && paddle.power != 5) {
                 mapping.coolDown -= delta;
+            }
+            else if (mapping.coolDown > 0 && paddle.power == 5) {
+                mapping.coolDown -= delta * 1.5;
             }
 
             if (mapping.leftKey.isDown) {
