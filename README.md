@@ -257,9 +257,9 @@ Los bocetos de los personajes se encuentran en el apartado [4.2](#42-personajes)
 *Figura 8. Pantalla de juego.*
 
 #### 7.1.2 Pantallas implementadas
-![Pantalla de fin de la partida](img/boceto_fin_partida.png)
+![Pantalla de fin de la partida](img/victoria1.png) ![Pantalla de fin de la partida](img/victoria2.png)
 
-*Figura 9. Pantalla de fin de la partida.*
+*Figura 9. Pantallas de fin de la partida.*
 
 ![Pantalla de ajustes](img/boceto_ajustes.png)
 
