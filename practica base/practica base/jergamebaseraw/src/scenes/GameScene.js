@@ -168,6 +168,8 @@ export class GameScene extends Phaser.Scene {
             const projectile = new Ball(this, key, spawnX, spawnY, paddle.team);
             projectile.shootId = shootId;
             projectile.hitProcessed = false;
+            projectile.rebote = 0;
+            projectile.sprite.setBounce(0.3);
             this.balls.add(projectile);
             this.projectileCollision(projectile, paddle, angle);
         }
@@ -189,9 +191,16 @@ export class GameScene extends Phaser.Scene {
             );
 
         this.players.forEach(target => {
-            if (target.id === paddle.id)  return;
+          
 
             this.physics.add.collider(projectile.sprite, target.sprite, () => {
+                if (target.id === paddle.id) {
+                    if (projectile.rebote >= 1) {
+                        projectile.sprite.destroy();
+                        this.balls.delete(projectile);
+                    }
+                    return;
+                } 
                 if (!projectile.sprite.active || projectile.hitProcessed) return;
                 this.hitProcessed = true;
 
@@ -204,10 +213,10 @@ export class GameScene extends Phaser.Scene {
                 if (this.scoredShoots.has(projectile.shootId)) return;
                 this.scoredShoots.add(projectile.shootId); 
 
-                if (projectile.team == 1) {
+                if (projectile.team == 1 && paddle.team == 1) {
                     this.rightGoals += 1;
                     this.goal();
-                } else if (projectile.team == 2) {
+                } else if (projectile.team == 2 && paddle.team == 0) {
                     this.leftGoals += 1;
                     this.goal();
                 }
@@ -218,7 +227,12 @@ export class GameScene extends Phaser.Scene {
 
         this.blocks.forEach(block => {
             this.physics.add.collider(projectile.sprite, block.sprite, () => {
-                projectile.sprite.destroy();
+                if (paddle.power == 4 && projectile.rebote <2){
+                    projectile.sprite.setBounce(0.3);
+                    projectile.rebote++;
+                } else{
+                    projectile.sprite.destroy();
+                }
             });   
         });
     }
