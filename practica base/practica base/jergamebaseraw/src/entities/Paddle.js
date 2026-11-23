@@ -8,7 +8,7 @@ export class Paddle {
         this.direction=0;
         this.rotated=false;
         this.team=color;
-        this.power = 4; //0 normal, 1 disparo explosivo, 2 barrera, 3 disparo triple, 4 rebote y 5 más cadencia
+        this.power = 0; //0 normal, 1 disparo explosivo, 2 barrera, 3 disparo triple, 4 rebote y 5 más cadencia
 
         this.sprite = scene.physics.add.sprite(x, y, img);
         this.sprite.setDisplaySize(166.5 , 119 );
