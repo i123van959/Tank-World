@@ -112,10 +112,10 @@ El objetivo de cada jugador es destruir el tanque enemigo y evitar que el rival 
 
 | Objeto | Efecto | Duración | Aparición | Icono |
 | :--- | :--- | :---: | :--- | :--- |
-| Barrera | Mientras este activa el tanque no puede recibir daño | 10 s | Aleatoria con tiempo indeterminado |![icono escudo](poder_escudo.png) |
-| Disparo triple | Dispara tres balas, una hacia delante y dos ligeramente giradas hacia cada lado | 15 s | Aleatoria con tiempo indeterminado |![icono triple](poder_triple.png) |
-| Rebote | Las balas disparadas tienen la capacidad de rebotar una vez en las paredes | 15 s | Aleatoria con tiempo indeterminado |![icono icono](poder_rebote.png) |
-| Más cadencia | Aumenta la cadencia de disparo pero disminuye el daño | 15 s | Aleatoria con tiempo indeterminado |![icono cadencia](poder_cadencia.png) |
+| Barrera | Mientras este activa el tanque no puede recibir daño | 2.5 s | Aleatoria con tiempo indeterminado |![icono escudo](poder_escudo.png) |
+| Disparo triple | Dispara tres balas, una hacia delante y dos ligeramente giradas hacia cada lado | 3 s | Aleatoria con tiempo indeterminado |![icono triple](poder_triple.png) |
+| Rebote | Las balas disparadas tienen la capacidad de rebotar una vez en las paredes | 3 s | Aleatoria con tiempo indeterminado |![icono icono](poder_rebote.png) |
+| Más cadencia | Aumenta la cadencia de disparo pero disminuye el daño | 3 s | Aleatoria con tiempo indeterminado |![icono cadencia](poder_cadencia.png) |
 
 #### 3.3.3. Sistema de puntuación
 
