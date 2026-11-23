@@ -112,7 +112,6 @@ El objetivo de cada jugador es destruir el tanque enemigo y evitar que el rival 
 
 | Objeto | Efecto | Duración | Aparición |
 | :--- | :--- | :---: | :--- |
-| Disparo explosivo | Disminuye el alcance del disparo, pero inflige daño en una pequeña área | 15 s | Aleatoria con tiempo indeterminado |
 | Barrera | Mientras este activa el tanque no puede recibir daño | 10 s | Aleatoria con tiempo indeterminado |
 | Disparo triple | Dispara tres balas, una hacia delante y dos ligeramente giradas hacia cada lado | 15 s | Aleatoria con tiempo indeterminado |
 | Rebote | Las balas disparadas tienen la capacidad de rebotar una vez en las paredes | 15 s | Aleatoria con tiempo indeterminado |
