@@ -273,7 +273,7 @@ Los bocetos de los personajes se encuentran en el apartado [4.2](#42-personajes)
 
 *Figura 9. Pantallas de fin de la partida.*
 
-![Pantalla de ajustes](img/boceto_ajustes.png)
+![Pantalla de ajustes](img/Pantalla_opciones.png)
 
 *Figura 10. Pantalla de ajustes.*
 
@@ -284,6 +284,10 @@ Los bocetos de los personajes se encuentran en el apartado [4.2](#42-personajes)
 ![Pantalla de fin de la partida](img/menu_pausa.png)
 
 *Figura 12. Pantalla de pausa.*
+
+![Pantalla de fin de la partida](img/Pantalla_reglas.png)
+
+*Figura 13. Pantalla de reglas.*
 
 ### 7.2. Diagrama de flujo
 
