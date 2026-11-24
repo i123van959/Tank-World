@@ -88,16 +88,28 @@ El objetivo de cada jugador es destruir el tanque enemigo y evitar que el rival 
 
 ### 3.2. Controles
 
-
+##3.2.1 Controles para juego local
 | Acción | Jugador 1 | Jugador 2 |
 | :--- | :---: | :---: |
 | Rotar a la izquierda | `A` | `←` |
 | Rotar a la derecha | `D` | `→` |
 | Moverse hacia delante | `W` | `↑` |
 | Moverse hacia atrás | `S` | `↓` 
-| Acción especial potenciador | `Espacio` | `Enter` |
-| Apuntar / disparar | Ratón (clic izquierdo) | Ratón (clic izquierdo) |
+| Acción especial potenciador | `Espacio` | `F` |
+| Apuntar / disparar | `Espacio` | `F` |
 | Pausa | `Esc` | `Esc` |
+
+##3.2.2 Controles para juego en linea
+
+| Acción | Controles|
+| :--- | :---: |
+| Rotar a la izquierda | `A`, `←` |
+| Rotar a la derecha | `D`, `→` |
+| Moverse hacia delante | `W`, `↑` |
+| Moverse hacia atrás | `S`,`↓`  |
+| Acción especial potenciador | `Espacio` |
+| Apuntar / disparar | `F` |
+| Pausa | `Esc` |
 
 ### 3.3. Mecánicas
 
