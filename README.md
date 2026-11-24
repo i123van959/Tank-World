@@ -303,6 +303,7 @@ flowchart TD
     D --> B
     E --> B
     F --> B
+    K --> B
     C --> G[Partida]
     G -->|Esc| H[Pausa]
     H -->|Reanudar| G
