@@ -95,8 +95,8 @@ El objetivo de cada jugador es destruir el tanque enemigo y evitar que el rival 
 | Rotar a la derecha | `D` | `→` |
 | Moverse hacia delante | `W` | `↑` |
 | Moverse hacia atrás | `S` | `↓` 
-| Acción especial potenciador | `Espacio` | `F` |
-| Apuntar / disparar | `Espacio` | `F` |
+| Acción especial potenciador | `-` | `F` |
+| Apuntar / disparar | `-` | `F` |
 | Pausa | `Esc` | `Esc` |
 
 #### 3.2.2 Controles para juego en linea
