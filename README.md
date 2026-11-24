@@ -299,6 +299,7 @@ flowchart TD
     B --> D[Juego en linea] 
     B --> E[Ajustes]
     B --> F[Créditos]
+    B --> K[Como jugar]
     D --> B
     E --> B
     F --> B
