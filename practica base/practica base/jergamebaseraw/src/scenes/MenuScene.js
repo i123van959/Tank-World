@@ -13,6 +13,7 @@ export class MenuScene extends Phaser.Scene {
         this.load.image('linea','assets/images/juego en linea.png')
         this.load.image('opciones','assets/images/opciones.png')
         this.load.image('creditos','assets/images/creditos.png')
+        this.load.image('interrogante','assets/images/boton como jugar.png')
         this.load.image('salir','assets/images/salir.png')
         // Hit sound
 
@@ -69,6 +70,15 @@ export class MenuScene extends Phaser.Scene {
                 this.sound.stopAll();
                 this.game.destroy(true); // Apaga el motor y limpia el canvas
                 window.close();
+            });
+        const HowToPlayBtn = this.add.image(750, 550, 'interrogante').setOrigin(0.5)
+            .setInteractive({ useHandCursor: true })
+            .on('pointerover', () => HowToPlayBtn.setAlpha(0.9))
+            .on('pointerout', () => HowToPlayBtn.setAlpha(1))
+            .on('pointerdown', () => {
+                this.music1.stop();
+                this.scene.pause;
+                this.scene.launch('HowToPlayScene');
             });
         this.music1 = this.sound.add('music1', { loop: true, volume: 0.3 });
         this.music1.play();
