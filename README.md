@@ -107,8 +107,8 @@ El objetivo de cada jugador es destruir el tanque enemigo y evitar que el rival 
 | Rotar a la derecha | `D`, `→` |
 | Moverse hacia delante | `W`, `↑` |
 | Moverse hacia atrás | `S`,`↓`  |
-| Acción especial potenciador | `Espacio` |
-| Apuntar / disparar | `F` |
+| Acción especial potenciador | `Espacio`, `F` |
+| Apuntar / disparar |`Espacio`, `F` |
 | Pausa | `Esc` |
 
 ### 3.3. Mecánicas
